@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="12.css">
+  <script src="https://codepen.io/tonybanik/pen/3f837b2f0085b5125112fc455941ea94.js"></script>
+  <title>Document</title>
+</head>
+<body>
+   
+<world>
+  <div class="floor">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="coin">
+    <div class="edge">
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+      <div class="segment"></div>
+    </div>
+  </div>
+</world>
+
+<script>
+              let flippin = false, doc = document;
+doc.querySelector('.coin').addEventListener('click', e => {
+  if(flippin) return false; flippin = true;
+  
+  //declare objects to animate, remove any existing anim
+  let objs = doc.querySelectorAll('.line, .coin');
+  objs.forEach((line) => line.classList.remove('anim'));
+  
+  //choose heads or tails
+  let winner = Math.random() > 0.5 ? '900deg' : '720deg';
+  doc.querySelector(':root').style.setProperty('--flips', winner)
+  
+  //apply animation and wait for completion
+  setTimeout(() => {
+    objs.forEach((line) => line.classList.add('anim'));
+    e.target.addEventListener('animationend', () => flippin = false);
+  });
+});
+
+//click once on load for the thumbnail
+setTimeout(() => doc.querySelector('.coin').click(), 750)
+</script>
+</body>
+</html>
