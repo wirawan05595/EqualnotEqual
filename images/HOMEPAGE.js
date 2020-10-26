@@ -1,0 +1,3 @@
+function fn00000() { document.write( '<embed  width=1920  height=1080  name=1  src=images/BG.svg  Alt=  type=image/svg-xml  pluginspage=http://www.adobe.com/svg/viewer/install/  wmode=transparent  > '); }
+function fn00001() { document.write( '<embed  width=1920  height=1080  name=2  src=images/BG_L.svg  Alt=  type=image/svg-xml  pluginspage=http://www.adobe.com/svg/viewer/install/  wmode=transparent  > '); }
+function fn00002() { document.write( '<embed  width=1920  height=1080  name=3  src=images/BG_R.svg  Alt=  type=image/svg-xml  pluginspage=http://www.adobe.com/svg/viewer/install/  wmode=transparent  > '); }
