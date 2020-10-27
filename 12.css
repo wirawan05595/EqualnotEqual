@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:900");
-:root {
-  --flips: 540deg;
-}
+
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -16,8 +13,9 @@ body {
 }
 
 .coin {
-  height: 150px;
-  width: 150px;
+  height: 500px;
+  z-index: 10000;
+  width: 500px;
   transform-style: preserve-3d;
   transform-origin: 50%;
   cursor: grab;
@@ -25,14 +23,46 @@ body {
 .coin.anim {
   animation: flip 1s linear forwards;
 }
-.coin:before, .coin:after {
+.coin:before{
+  background-image: url("images/1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
+
+  transform: translateZ(12.5px);
   display: grid;
   place-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  background: #f7941e;
+  border: 12px solid #f8a037;
+  box-shadow: inset 0 0 0 3px #f38809;
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+  color: #f38809;
+  text-shadow: 1.5px 1.5px 0 #e48008, -1.5px -1.5px 0 #f8a745;
+
+} 
+.coin:after {
+  background-image: url("images/2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -o-background-size: 100% 100%, auto;
+  -moz-background-size: 100% 100%, auto;
+  -webkit-background-size: 100% 100%, auto;
+  background-size: 100% 100%, auto;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
   border: 12px solid #f8a037;
   box-shadow: inset 0 0 0 3px #f38809;
   font-size: 60px;
@@ -42,11 +72,11 @@ body {
 }
 .coin:before {
   transform: translateZ(12.5px);
-  content: 'O';
+  content: ' ';
 }
 .coin:after {
   transform: translateZ(-12.5px) rotateY(180deg) rotateZ(180deg);
-  content: 'I';
+  content: ' ';
 }
 .coin .edge {
   transform: translateX(62.5px);
@@ -54,7 +84,7 @@ body {
   backface-visibility: hidden;
 }
 .coin .edge .segment {
-  height: 150px;
+  height: 500px;
   width: 25px;
   position: absolute;
   transform-style: preserve-3d;
@@ -63,8 +93,8 @@ body {
 .coin .edge .segment:before, .coin .edge .segment:after {
   content: '';
   display: block;
-  height: 15px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
   position: absolute;
   transform: rotateX(84.375deg);
 }
@@ -126,64 +156,7 @@ body {
   transform: rotateY(90deg) rotateX(180deg);
 }
 
-.floor {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-}
-.floor .line {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -3.125px;
-  width: 150px;
-  height: 6.25px;
-  transform-origin: center left;
-  border-radius: 6.25px;
-  background: linear-gradient(90deg, white 20%, transparent 20%);
-  background-repeat: no-repeat;
-  opacity: 0;
-}
-.floor .line.anim {
-  animation: lines 0.6s ease-out forwards;
-  animation-delay: 0.65s;
-}
-.floor .line:nth-child(1) {
-  transform: rotate(30deg) scale(1.1);
-}
-.floor .line:nth-child(2) {
-  transform: rotate(60deg);
-}
-.floor .line:nth-child(3) {
-  transform: rotate(90deg) scale(1.1);
-}
-.floor .line:nth-child(4) {
-  transform: rotate(120deg);
-}
-.floor .line:nth-child(5) {
-  transform: rotate(150deg) scale(1.1);
-}
-.floor .line:nth-child(6) {
-  transform: rotate(180deg);
-}
-.floor .line:nth-child(7) {
-  transform: rotate(210deg) scale(1.1);
-}
-.floor .line:nth-child(8) {
-  transform: rotate(240deg);
-}
-.floor .line:nth-child(9) {
-  transform: rotate(270deg) scale(1.1);
-}
-.floor .line:nth-child(10) {
-  transform: rotate(300deg);
-}
-.floor .line:nth-child(11) {
-  transform: rotate(330deg) scale(1.1);
-}
-.floor .line:nth-child(12) {
-  transform: rotate(360deg);
-}
+
 
 @keyframes flip {
   0% {
