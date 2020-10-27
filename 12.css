@@ -3,7 +3,7 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
+.bb{background:linear-gradient(90deg, rgba(243,160,26,1) 0%, rgba(121,9,104,1) 100%);border-radius: 25%;color: #fff;}
 body {
   background: #3e3b3b;
   display: grid;
@@ -12,6 +12,8 @@ body {
   overflow: hidden;
   font-family: 'Kanit', sans-serif;
 }
+. {background-color: linear-gradient(90deg, rgba(243,160,26,1) 0%, rgba(121,9,104,1) 100%);
+ border-radius: 50%;}
 
 .coin {
   height: 500px;
