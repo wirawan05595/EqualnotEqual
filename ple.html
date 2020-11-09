@@ -1,0 +1,136 @@
+<script src="java.js"></script>
+<div id="container">
+  <button id="left">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+  </button>
+  <button id="right">
+    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+  </button>
+  
+  <div class="options">
+    
+  </div>
+  
+ <div class="slider">
+   <div class="slide" >
+     <div class="container">
+       <h1>this is a header</h1>
+     <p>this is text</p>
+     </div>
+    
+   </div>
+<div class="slide" ></div>
+ <div class="slide" ></div> 
+ </div>
+  
+</div>
+
+<style>
+$red: #ff4d4d;
+$green: #33cc33;
+$blue: #3399ff;
+$l-grey: #ccc;
+#container{
+  background:black;
+  height:100vh;
+  overflow:hidden;
+  position:relative;
+  
+}
+
+i{
+  color:white;
+  
+  
+ 
+}
+
+button{
+  position:absolute;
+  top:50%;
+  padding:1em;
+  border-radius:50%;
+  height:45px;
+  display:flex;
+  align-items:center;
+  width:45px;
+  border-style:none;
+  z-index:5;
+  background:grey;
+  transition:all 0.3s;
+  &:hover{
+    background:$l-grey;
+  }
+}
+
+button#left{
+    left:5%;
+  }
+  
+button#right{
+    right:5%;
+ }
+
+.slider{
+  height:100%;
+  width:300%;
+  transition:all ease-out 0.5s;
+  float: left;
+  display:inline-block;
+}
+
+.slide{
+  width:100%;
+  height:100%;
+  display:inline-block;
+  float:left;
+  &:nth-of-type(1){
+    background-color:$red;
+  }
+  
+  &:nth-of-type(2){
+    background-color:$green;
+  }
+  
+  &:nth-of-type(3){
+    background-color:$blue;
+  }
+}
+
+.options{
+  height:15px;
+  min-width:100px;
+  width:100%;
+  max-width:300px;
+  left:50%;
+  top:70%;
+  transition: all 0.3s;
+  position:absolute;
+  text-align:center;
+  z-index:5;
+}
+
+.select.active{
+  background:white;
+}
+
+.select{
+  height:100%;
+  max-width:15px;
+  width:100%;
+ background-color:transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  display:inline-block;
+  margin:0 1px;
+  &:hover{
+    cursor:pointer;
+  }
+}
+
+ </style>
+
+
+
+
+
