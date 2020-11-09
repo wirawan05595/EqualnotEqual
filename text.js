@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     function StartTextAnimation(i) {
         if (typeof dataText[i] == 'undefined') {
             document.querySelector("h2").innerHTML = ' ';
+            document.querySelector(".button").style.opacity = 1;
+            //end text
         }
 
         if (i < dataText[i].length) {
