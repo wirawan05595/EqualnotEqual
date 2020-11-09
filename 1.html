@@ -20,8 +20,14 @@
 
     .slide {
         margin: 0;
-        -webkit-background-size: cover;
-        background-size: cover;
+        background-repeat: no-repeat;
+         background-position: center center;
+        background-attachment: fixed;
+        -o-background-size: 100% 100%, auto;
+       -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+        
        width: 100vw;
         height: 100vh;
       }
@@ -32,23 +38,27 @@
       }
       .one {
         
-        background: #efdefe;
+        background-image: url("2.jpg");
       }
       .two {
-        background: #a3f3d3;
+        background-image: url("1.jpg");
       }
       .three {
-        background: #0bbaa0;
+        background-image: url("3.jpg");
       }
       .four {
-        background: #00dfdf;
-      }
-      .four {
-        background: #00dfdf;
+        background-image: url("4.jpg");
       }
       .five {
-        background: #000;
-      }    
+        background-image: url("5.jpg");
+      }
+      .ice1{
+          background-image: url("1.jpg");
+          z-index: 1000000000;
+          position: relative;
+     
+          
+      } 
       </style>
 </head>
 <body>
@@ -56,22 +66,25 @@
         <div class="wrapper">
           <div class="slide one" id="one"  >
 
-            <img src="images/BG_R.svg"  style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -7%;">
-	        <img src="images/BG_L.svg"  style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-7%; " >
+            <img src="images/BG_R.svg"  style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -6.5%;">
+	        <img src="images/BG_L.svg"  style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-6.5%; " >
 	        <a href="#two" style="z-index: 5; width: 100%;height: 100%; position: absolute;left:50%; " >Go to Section 2</a>
     
           </div>
 
           <div class="slide two" id="two"  >
+            <div class="ice1">
+
+            </div>
             <a href="#one" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 1     </a>
             <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3</a>
             
-              
-
+            
           </div>
 
 
           <div class="slide three" id="three" >
+
             <a href="#two" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 2    </a>
             <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 4</a>
             
