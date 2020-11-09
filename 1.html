@@ -14,6 +14,8 @@
             font-family: 'Kanit', sans-serif;
             margin-left: auto;
             margin-right: auto;
+            overflow-y: hidden;
+            overflow-x: hidden;
         }
 
     .slide {
@@ -54,13 +56,14 @@
         <div class="wrapper">
           <div class="slide one" id="one"  >
 
-            <img src="images/BG_R.svg"  style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -8%;">
-	        <img src="images/BG_L.svg"  style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-8%; " >
+            <img src="images/BG_R.svg"  style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -7%;">
+	        <img src="images/BG_L.svg"  style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-7%; " >
 	        <a href="#two" style="z-index: 5; width: 100%;height: 100%; position: absolute;left:50%; " >Go to Section 2</a>
     
           </div>
 
           <div class="slide two" id="two"  >
+            <a href="#one" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 1     </a>
             <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3</a>
             
               
@@ -69,17 +72,22 @@
 
 
           <div class="slide three" id="three" >
-
+            <a href="#two" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 2    </a>
             <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 4</a>
             
           </div>
 
-          <div class="slide four" id="four" >   
+          <div class="slide four" id="four" > 
+            <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3    </a> 
             <a href="#five" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 5</a>    
         </div>
 
 
-        <div class="slide five" id="five" ></div>
+        <div class="slide five" id="five" >
+            <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 4</a>  
+
+
+        </div>
 
 
         </div>
