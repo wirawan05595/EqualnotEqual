@@ -1,151 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images\123.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <title>1%</title>
-    <style>
-        body{
-            margin: 0;
-            font-family: 'Kanit', sans-serif;
-            margin-left: auto;
-            margin-right: auto;
-            overflow-y: hidden;
-            overflow-x: hidden;
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images\123.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>1%</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
 
     .slide {
-        margin: 0;
-        background-repeat: no-repeat;
-         background-position: center center;
-        background-attachment: fixed;
-        -o-background-size: 100% 100%, auto;
-       -moz-background-size: 100% 100%, auto;
-        -webkit-background-size: 100% 100%, auto;
-        background-size: 100% 100%, auto;
-        
-       width: 100vw;
-        height: 100vh;
-      }
-      .wrapper {
-        display: flex;
-        flex-direction: row;
-        width: 500vw;
-      }
-      .one {
-        
-        background-image: url("1.jpg");
-      }
-      .two {
-        background-image: url("2.jpg");
-      }
-      .three {
-        background-image: url("3.jpg");
-      }
-      .four {
-        background-image: url("4.jpg");
-      }
-      .five {
-        background-image: url("5.jpg");
-      }
+      margin: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      -o-background-size: 100% 100%, auto;
+      -moz-background-size: 100% 100%, auto;
+      -webkit-background-size: 100% 100%, auto;
+      background-size: 100% 100%, auto;
 
-      .ice1 {
-  -webkit-transition: all 2s ease;  
-  -moz-transition: all 2s ease;  
-  -o-transition: all 2s ease;  
-  -ms-transition: all 2s ease;  
-  transition: all 2s ease;
-}
+      width: 100vw;
+      height: 100vh;
+    }
 
-.ice1-active {
-  opacity: 0;
-}
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 500vw;
+    }
 
-      </style>
+    .one {
+
+      background-image: url("1.jpg");
+    }
+
+    .two {
+      background-image: url("2.jpg");
+    }
+
+    .three {
+      background-image: url("3.jpg");
+    }
+
+    .four {
+      background-image: url("4.jpg");
+    }
+
+    .five {
+      background-image: url("5.jpg");
+    }
+
+    .ice1 {
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+
+    .ice1-active {
+      opacity: 0;
+    }
+
+    .text {
+      text-align: center;
+      color: antiquewhite;
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 60px;
+    }
+
+    span {
+      border-right: .05em solid;
+      animation: caret 1s steps(1) infinite;
+    }
+
+    @keyframes caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="outer-wrapper">
-        <div class="wrapper">
-          <div class="slide one" id="one"  >
+  <div class="outer-wrapper">
+    <div class="wrapper">
+      <div class="slide one" id="one">
 
-            <img src="images/BG_R.svg"  style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -6.5%;">
-	        <img src="images/BG_L.svg"  style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-6.5%; " >
-	        <a href="#two" style="z-index: 5; width: 100%;height: 100%; position: absolute;left:50%; " >Go to Section 2</a>
-    
-          </div>
+        <img src="images/BG_R.svg" style="z-index: 1; width: 100%;height: 100%; position: absolute;right: -6.5%;">
+        <img src="images/BG_L.svg" style="z-index: 2; width: 100%;height: 100%; position: absolute;left:-6.5%; ">
+        <a href="#two" style="z-index: 5; width: 100%;height: 100%; position: absolute;left:50%; ">Go to Section 2</a>
+        <h2 class="text"></h2>
 
-          <div class="slide two" id="two"  >
-            
-            <a href="#one" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 1  </a>
-            <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3</a>
-            <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
+        <script type="text/javascript" src="text.js"></script>
+      </div>
 
+      <div class="slide two" id="two">
 
-            
-            <img src="2.1.jpg" id="ice1"style="width: 100%; height: 100%;z-index: 3;">
-            <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;">
-            
-            
-            
-          </div>
+        <a href="#one" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 1 </a>
+        <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 3</a>
+        <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
 
 
-          <div class="slide three" id="three" >
 
-            <a href="#two" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 2    </a>
-            <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 4</a>
-            
-          </div>
-
-          <div class="slide four" id="four" > 
-            <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3    </a> 
-            <a href="#five" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 5</a>    
-        </div>
+        <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
+        <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;">
 
 
-        <div class="slide five" id="five" >
-            <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 4</a>  
 
-
-        </div>
-
-
-        </div>
       </div>
 
 
-      <script >
+      <div class="slide three" id="three">
+
+        <a href="#two" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 2 </a>
+        <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 4</a>
+
+      </div>
+
+      <div class="slide four" id="four">
+        <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 3
+        </a>
+        <a href="#five" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 5</a>
+      </div>
 
 
-      $('a[href^="#"]').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        
-        if( target.length ) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollLeft: target.offset().left
-            }, 1000);
-        }
+      <div class="slide five" id="five">
+        <a href="#four" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; ">Go to Section 4</a>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script>
+
+
+    $('a[href^="#"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollLeft: target.offset().left
+        }, 1000);
+      }
     });
-    
-    $(window).on('scroll', function() {
-        $('.slide').each(function() {
-            if($(window).scrollLeft() >= $(this).offset().left) {
-                var id = $(this).attr('id');
-                $('header ul li a').removeClass('active');
-                $('header ul li a[href="#'+ id +'"]').addClass('active');
-            }
-        });
+
+    $(window).on('scroll', function () {
+      $('.slide').each(function () {
+        if ($(window).scrollLeft() >= $(this).offset().left) {
+          var id = $(this).attr('id');
+          $('header ul li a').removeClass('active');
+          $('header ul li a[href="#' + id + '"]').addClass('active');
+        }
+      });
     });
 
     function myFunction() {
-  document.getElementById("ice1").style.opacity = 0;
-}
-    
-</script>
+      document.getElementById("ice1").style.opacity = 0;
+    }
+
+  </script>
 </body>
+
 </html>
