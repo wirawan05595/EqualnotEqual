@@ -82,7 +82,7 @@
             
             <a href="#one" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 1  </a>
             <a href="#three" style="z-index: 5; width: 100%;height: 100%;position: relative; left:50%; " >Go to Section 3</a>
-            <button id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
+            <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
 
 
             
@@ -142,10 +142,10 @@
         });
     });
 
-
-    $("#button").click(function() {
-  $('.transform').toggleClass('transform-active');
-   });
+    function myFunction() {
+  document.getElementById("ice1").style.opacity = 0;
+}
+    
 </script>
 </body>
 </html>
