@@ -9,24 +9,32 @@ body{
 	font-family: 'Kanit', sans-serif;
 	overflow-y: hidden;
     overflow-x: hidden;
+	margin:0;
+	
 	
 }
 
 h2 {
-	z-index: 4;
-	position: absolute;
-	top: 25%;
-	line-height: 100px;
-	height: 90px;
-	margin-top: -50px;
+    display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
 	font-size:  60px;
-	width: 100%;
-	text-align: center;
+
+	
 	color: transparent;
 	-webkit-animation: blurFadeInOut 5s ease-in backwards;
 	-moz-animation: blurFadeInOut 4s ease-in backwards;
 	-ms-animation: blurFadeInOut 4s ease-in backwards;
 	animation: blurFadeInOut 3s ease-in backwards;
+}
+
+.ice1{
+	background-image: url("BG.jpg");
+	z-index: 100;
+	width:100%; 
+	height:100%; 
+
 }
  h2.frame-1 {
 	-webkit-animation-delay: 0s;	-moz-animation-delay: 0s;
@@ -110,13 +118,14 @@ h2.frame-4 {
 </style>
 <body style="background-color:  #000;">
 	<div>
-	<img src="images/BG.svg" style="z-index: 0; width: 100%;position: fixed; margin: -1%; padding:0%" >
+	
 	<img src="images/BG_R.svg"  style="z-index: 1; width: 100%;position: fixed;right: 0%;">
 	<img src="images/BG_L.svg"  style="z-index: 2; width: 100%;position: fixed;left: 0%;" >
-	<h2 class="frame-1">คุณรู้หรือไม่ ?<br>ไทยติดอันดับ 10<br>ประเทศที่มีความเหลื่อมล้ำ<br>ด้านความมั่งคั่งมากที่สุดในโลก</h2>
-	<h2 class="frame-2">ปัญหา รวยกระจุก จนกระจาย<br>เป็นปัญหาเรื้อรัง<br>ที่รักษาไม่หายเป็นเวลานาน</h2>
+	<h2 class="frame-1" >คุณรู้หรือไม่ ?<br>ไทยติดอันดับ 10<br>ประเทศที่มีความเหลื่อมล้ำ<br>ด้านความมั่งคั่งมากที่สุดในโลก</h2>
+	<h2 class="frame-2"
+	>ปัญหา รวยกระจุก จนกระจาย<br>เป็นปัญหาเรื้อรัง<br>ที่รักษาไม่หายเป็นเวลานาน</h2>
 	<h2 class="frame-3">คนมักพูดกันว่า<br>เหรียญมักมีสองด้านเสมอ<br>เเล้วถ้าผมเปรียบว่า<br>เหรียญนี้จะกำหนดโชคชะตาชีวิต<br>ที่คุณจะได้เกิดมา</h2>
-	<h2 class="frame-4">อยากกลองหน่อยมั้ยว่า<br>คุณจะได้รับมันอย่างไร</h2>
+	<h2 class="frame-4" >อยากกลองหน่อยมั้ยว่า<br>คุณจะได้รับมันอย่างไร</h2>
 	
 	</div>
 
