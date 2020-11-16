@@ -1,262 +1,262 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>ConTrack</title>
-<meta charset=utf-8>
-<meta name=description content="">
-<meta name=viewport content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="https://jabont.com/jayss/jayss2.css">
-<link rel="stylesheet" type="text/css" href="style.css?1600152107">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images\123.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>1%</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .slide {
+      margin: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      
+      -o-background-size: 100% 100%, auto;
+      -moz-background-size: 100% 100%, auto;
+      -webkit-background-size: 100% 100%, auto;
+      background-size: 100% 100%, auto;
+
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 500vw;
+    }
+
+    .one {
+
+      background-image: url("Background.png");
+      background-attachment: fixed;
+    }
+
+    .two {
+      background-image: url("B0.png");
+      background-attachment: fixed;
+    }
+
+    .three {
+      background-image: url("B1.png");
+    }
+
+    .four {
+      background-image: url("B3.png");
+    }
+
+    .five {
+      background-image: url("B4.png");
+    }
+
+    .ice1 {
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      transition: all 2s ease;
+    }
+
+    .ice1-active {
+      opacity: 0;
+    }
+
+    .text {
+      text-align: center;
+      color: antiquewhite;
+      position: relative;
+      margin: auto auto;
+      top: 30%;
+      display: block;
+      font-size: 60px;
+      border-right: .05em solid;
+      animation: caret 1s steps(1) infinite;
+    }
+
+    .custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+  .btn-5 {
+  width: 130px;
+  height: 40px;
+   line-height: 42px;
+  padding: 0;
+  border: none;
+   }
+ .btn-5:hover {
+  color: #f0094a;
+  background: transparent;
+  box-shadow:none;
+}
+ .btn-5:before,
+ .btn-5:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #0002;
+  transition:400ms ease all;
+}
+.btn-5:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-5:hover:before,
+.btn-5:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+
+    
+
+    @keyframes caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
+  <div class="outer-wrapper">
+    <div class="wrapper">
+      <div class="slide one" id="one">
 
-<section id="top_section" class="padding-l-vtc bg-ci4 cl-white">
-<anchor id="top"></anchor>
-<div class="cont-pd">
-<h1 class="h6">ConTrack Prototype <span class="b3">- Design System</span></h1>
-</div>
-</section>
+        <img src="BG_R.png" style="z-index: 1; width: 100%;height: 100%; position: absolute;float: right;">
+        <img src="BG_L.png" style="z-index: 2; width: 100%;height: 100%; position: absolute;float: left; ">
+        
+        <a  href="#two" class="button" style="z-index: 5; position: absolute;left:50%; visibility: hidden; top: 80%;">
+          <button class="custom-btn btn-5"><span>Read More</span></button> </a>
+        <h2 class="text"></h2>
 
-<section id="color_section" class="padding-l-vtc">
-<anchor id="color"></anchor>
-<div class="cont-pd">
-<h2 class="h7 title-line">Color palettes</h2>
-<sp class=""></sp>
-<theboxes class="top spacing -clip" boxing="3">
-<box col=""><inner class="">
-<h3 class="cl-ci1">CI 1 <div class="bg-ci1" style="height: 1em;width: 10em;"></div> </h3>
-</inner></box>
-<box col=""><inner class="cl-ci1 padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="bg-ci1 cl-white padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="">
-<h3 class="cl-ci2">CI 2 <div class="bg-ci2" style="height: 1em;width: 10em;"></div> </h3>
-</inner></box>
-<box col=""><inner class="cl-ci2 padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="bg-ci2 cl-white padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="">
-<h3 class="cl-ci3">CI 3 <div class="bg-ci3" style="height: 1em;width: 10em;"></div> </h3>
-</inner></box>
-<box col=""><inner class="cl-ci3 padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="bg-ci3 cl-white padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="">
-<h3 class="cl-ci4">CI 4 <div class="bg-ci4" style="height: 1em;width: 10em;"></div> </h3>
-</inner></box>
-<box col=""><inner class="cl-ci4 padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="bg-ci4 cl-white padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="">
-<h3 class="cl-ci5">CI 5 <div class="bg-ci5" style="height: 1em;width: 10em;"></div> </h3>
-</inner></box>
-<box col=""><inner class="cl-ci5 padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-<box col=""><inner class="bg-ci5 cl-white padding round shadow">
-<h2>Hello World เรามาอย่างเป็นมิตร</h2>
-<sp class=""></sp>
-<b>Do you hear the people sing? Singing a song of angry men</b> It is the music of a people Who will not be slaves again When the beating of your heart Echoes the beating of the drums There is a life about to start When tomorrow comes
-<sp class=""></sp>
-<b>เธอได้ยินผู้คนร้องไหม ร้องเพลงนั่นไงเพลงคนคลั่งโกรธ</b> นี่คือดนตรีของผู้คน ที่จะไม่เป็นทาสใครอีกแล้ว เมื่อหัวใจเต้นระรัวเสียง สะท้อนจังหวะกลองระรัวก้อง นั้นชีวิตหนึ่งจะเกิดขึ้นมายามพรุ่งรุ่งวัน
-</inner></box>
-</theboxes>
-</div>
-</section>
+        <script type="text/javascript" src="text.js" class="text1"></script>
+      </div>
 
-<section id="gradient_section" class="padding-l-vtc">
-<anchor id="gradient"></anchor>
-<div class="cont-pd">
-<h2 class="h7 title-line">Gradient Color</h2>
-<sp class=""></sp>
-<h2>GD 1-2</h2>
-<sp class="xl bg-gd-1-2"></sp>
-<sp class=""></sp>
-<h2>GD 2-1</h2>
-<sp class="xl bg-gd-2-1"></sp>
-<sp class=""></sp>
-<h2>GD 2-3</h2>
-<sp class="xl bg-gd-2-3"></sp>
-<sp class=""></sp>
-<h2>GD 3-2</h2>
-<sp class="xl bg-gd-3-2"></sp>
-<sp class=""></sp>
-<h2>GD 3-4</h2>
-<sp class="xl bg-gd-3-4"></sp>
-<sp class=""></sp>
-<h2>GD 4-3</h2>
-<sp class="xl bg-gd-4-3"></sp>
-<sp class=""></sp>
-<h2>GD 4-5</h2>
-<sp class="xl bg-gd-4-5"></sp>
-<sp class=""></sp>
-<h2>GD 5-4</h2>
-<sp class="xl bg-gd-5-4"></sp>
-</div>
-</section>
+      <div class="slide two" id="two">
+        
 
-<section id="_section" class="padding-l-vtc">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h2 class="h7 title-line">Guide Logo</h2>
-<sp class=""></sp>
-<h1 class="h1 t-center">
-<span class="cl-ci2">Con</span><span class="cl-ci3">Tracks</span>
-</h1>
-</div>
-</section>
+        <a href="#one" style="z-index: 5; position: relative; right: -5%;">
+          <button class="custom-btn btn-5"><span>back</span></button>
+        </a> 
 
-<section id="_section" class="padding-l-vtc bg-ci4 cl-white">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h1 class="h1 t-center">
-<span class="cl-white">Con</span><span class="cl-ci3">Tracks</span>
-</h1>
-</div>
-</section>
 
-<section id="_section" class="padding-l-vtc bg-ci4 cl-white" style="background: linear-gradient(to right,var(--ci4),var(--ci5))">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h1 class="h1 t-center">
-<span class="cl-white">Con</span><span class="cl-ci3">Tracks</span>
-</h1>
-</div>
-</section>
+        <a href="#three" style="z-index: 5; position: relative; right: -75%; ">
+          <button class="custom-btn btn-5"><span>Continue</span></button>
+          </a>
 
-<section id="_section" class="padding-l-vtc bg-ci5 cl-white">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h1 class="h1 t-center">
-<span class="cl-ci2">Con</span><span class="cl-ci3">Tracks</span>
-</h1>
-</div>
-</section>
+        <!-- <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
 
-<section id="_section" class="padding-l-vtc bg-vblack cl-white">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h1 class="h1 t-center">
-<span class="cl-ci2">Con</span><span class="cl-ci3">Tracks</span>
-</h1>
-</div>
-</section>
 
-<section id="_section" class="padding-l-vtc">
-<anchor id=""></anchor>
-<div class="cont-pd">
-<h2 class="h7 title-line">Button</h2>
-</div>
-</section>
-<theboxes class="top -clip" boxing="2">
-<box col=""><inner class="t-center padding-l">
-<h3>Normal</h3>
-<sp class=""></sp>
-<a href="#!" class="btn -ci1 ffont size-l">สร้างปาร์ตี้</a>
-<sp class="l"></sp>
-<h3>Wowza</h3>
-<sp class=""></sp>
-<a href="#!" class="btn -ci2 ffont size-l">ยืนยันร่วมตี้</a>
-<sp class="l"></sp>
-<h3>Optional</h3>
-<sp class=""></sp>
-<a href="#!" class="btn ffont size-l bg-grey">ยกเลิก</a>
-</inner></box>
-<box col=""><inner class="t-center bg-ci5 padding-l cl-white">
-<h3>Normal</h3>
-<sp class=""></sp>
-<a href="#!" class="btn -ci1 ffont size-l">สร้างปาร์ตี้</a>
-<sp class="l"></sp>
-<h3>Wowza</h3>
-<sp class=""></sp>
-<a href="#!" class="btn -ci2 ffont size-l">ยืนยันร่วมตี้</a>
-<sp class="l"></sp>
-<h3>Optional</h3>
-<sp class=""></sp>
-<a href="#!" class="btn ffont size-l bg-grey">ยกเลิก</a>
-</inner></box>
-</theboxes>
 
-<section id="card_section" class="padding-xl-vtc bg-gd-3-4">
-<anchor id="card"></anchor>
-<div class="cont-pd">
-<h2 class="h7 title-line cl-white">Card</h2>
-<theboxes class="top spacing -clip" boxing="3">
-<box col=""><inner class="round bg-cloud shadow">
-<theboxes class="rack -clip">
-<box col="6"><inner class="bg-cover" style="background-image:url('https://www.thaiticketmajor.com/img_poster/prefix_1/2065/5065/cat-expo7-2020-5ef3ff07eaee8-l.jpg')">
-<div class="blank" ratio="3:4"></div>
-</inner></box>
-<box col="6"><inner class=" padding">
-<h2 class="title-line">Cat Expo 7</h2>
-<h4 class="cl-ci2">วันที่แสดง</h4>
-<p class="size-s">วันเสาร์ที่ 21 พฤศจิกายน 2563 - วันอาทิตย์ที่ 22 พฤศจิกายน 2563</p>
-<h4 class="cl-ci2">สถานที่แสดง</h4>
-<p class="size-s">สวนสนุกวันเดอร์เวิลด์ (รามอินทรา กม.10)</p>
-<h4 class="cl-ci2">ประตูเปิด</h4>
-<p class="size-s">15.00 น.</p>
-<sp class=""></sp>
-<h3>จำนวน 21 ปาร์ตี้</h3>
-<sp class=""></sp>
-<a href="#!" class="btn -ci1 ffont wide t-center">ดูปาร์ตี้</a>
-</inner></box>
-</theboxes>
-</inner></box>
-</theboxes>
-</div>
-</section>
+        <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
+        <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;"> -->
+
+
+
+      </div>
+
+
+      <div class="slide three" id="three">
+
+        <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
+          <button class="custom-btn btn-5"><span>back</span></button>
+        </a>
+
+        <a href="#four" style="z-index: 5;position: relative; right: -75%; ">
+          <button class="custom-btn btn-5"><span>Continue</span></button>
+        </a>
+
+      </div>
+
+      <div class="slide four" id="four">
+        <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
+          <button class="custom-btn btn-5"><span>back</span></button>
+        </a>
+        <a href="#five" style="z-index: 5;position: relative; right: -75%; ">
+          <button class="custom-btn btn-5"><span>Continue</span></button>
+        </a>
+      </div>
+
+
+      <div class="slide five" id="five">
+        <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
+          <button class="custom-btn btn-5"><span>back</span></button>
+        </a>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script>
+
+
+    $('a[href^="#"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollLeft: target.offset().left
+        }, 1000);
+      }
+    });
+
+    $(window).on('scroll', function () {
+      $('.slide').each(function () {
+        if ($(window).scrollLeft() >= $(this).offset().left) {
+          var id = $(this).attr('id');
+          $('header ul li a').removeClass('active');
+          $('header ul li a[href="#' + id + '"]').addClass('active');
+        }
+      });
+    });
+
+    function myFunction() {
+      document.getElementById("ice1").style.opacity = 0;
+    }
+
+  </script>
 </body>
+
 </html>
