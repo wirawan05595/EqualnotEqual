@@ -17,6 +17,7 @@
       margin-right: auto;
       overflow-y: hidden;
       overflow-x: hidden;
+      background: #000;
     }
 
     .slide {
@@ -49,26 +50,26 @@
     }
 
     .two {
-      background-image: url("B0.png");
+      background-image: url("img/W1.jpg");
       background-attachment: fixed;
     }
 
     .three {
-      background-image: url("B1.png");
+      background-image: url("img/WW2.jpg");
     }
 
     .four {
-      background-image: url("B3.png");
+      background-image: url("img/WW3.jpg");
     }
 
     .five {
-      background-image: url("B4.png");
+      background-image: url("img/WW4.jpg");
     }
 
-    .six{background-image: url("F0.png");}
-    .seven{background-image: url("F1.png");}
-    .eight{background-image: url("F3.png");}
-    .nine{background-image: url("F4.png");}
+    .six{background-image: url("img/W2.jpg");}
+    .seven{background-image: url("img/W3.jpg");}
+    .eight{background-image: url("img/W4.jpg");}
+    .nine{background-image: url("img/WW1.jpg");}
 
 
     .ice1 {
@@ -88,13 +89,14 @@
       color: antiquewhite;
       position: relative;
       margin: auto auto;
-      top: 30%;
+      top: 15%;
       display: block;
       font-size: 60px;
     }
 
     .text2{
-      animation: coincoin 2s ease-in-out;
+      animation: coincoin 50s ease-in-out;
+
     }
 
     .custom-btn {
@@ -157,7 +159,7 @@
 
 
 #coin {
-  animation: coincoin 2s ease-in-out;
+  animation: coincoin 1s ease-in-out;
   position: absolute;
   margin: 0 auto;
   width: 500px;
@@ -237,8 +239,9 @@
 }
 
 @-webkit-keyframes coincoin {
-  from { opacity: 0;}
-  to { opacity: 1; }
+  0% { opacity: 0;}
+  95% { opacity: 0; }
+  100% { opacity: 1; }
 }
   
 
@@ -270,14 +273,15 @@
               
           <div class="side-a"></div>
           <div class="side-b"></div>
-          <h1 style="position: relative; top: 100%; 
+          
+
+        </div>
+        <h1 style="position: relative; top: 80%; 
           text-align: center;
       color: antiquewhite;
       margin: auto auto;
       display: block;
       font-size: 60px;" class="text2">ลองกดที่เหรียญดูสิ</h1>
-
-        </div>
         <a href="#two" class="button" style="z-index: 5;opacity: 0; position: absolute;left:47%; visibility: hidden; top: 80%;">
           <button class="custom-btn btn-5" id="abs"><span>Read More</span></button> </a>
         <h2 class="text"></h2>
@@ -293,7 +297,7 @@
             </a> 
 
 
-            <a href="#three" style="z-index: 5; position: relative; right: -75%; ">
+            <a href="#six" style="z-index: 5; position: relative; right: -75%; ">
               <button class="custom-btn btn-5"><span>Continue</span></button>
               </a>
 
@@ -323,11 +327,11 @@
           <div class="slide three" id="three">
 
             <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
-              <button class="custom-btn btn-5"><span>back</span></button>
+              <button class="custom-btn btn-5"><span>Continue</span></button>
             </a>
 
             <a href="#four" style="z-index: 5;position: relative; right: -75%; ">
-              <button class="custom-btn btn-5"><span>Continue</span></button>
+              <button class="custom-btn btn-5"><span>back</span></button>
             </a>
 
           </div>
@@ -346,16 +350,19 @@
       </div>
 
 
+
+
       <div class="flex-direction-column"> 
 
           <div class="slide four" id="four">
-            <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
-              <button class="custom-btn btn-5"><span>back</span></button>
-            </a>
-            <a href="#five" style="z-index: 5;position: relative; right: -75%; ">
+            <a href=" #three" style="z-index: 5; position: relative; right: -5%; ">
               <button class="custom-btn btn-5"><span>Continue</span></button>
             </a>
+            <a href="#five" style="z-index: 5;position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a>
           </div>
+
 
            <div class="slide eight" id="eight">
         <a href="#seven" style="z-index: 5; position: relative; right: -5%; ">
@@ -369,17 +376,37 @@
       </div>
 
       <div class="flex-direction-column"> 
+
+
+
+
+
+
+
+
+
         <div class="slide five" id="five">
           <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
-            <button class="custom-btn btn-5"><span>back</span></button>
-          </a>
-          <a href="#six" style="z-index: 5; position: relative; right: -75%; ">
             <button class="custom-btn btn-5"><span>Continue</span></button>
+
+          </a>
+
+
+          <a href="#nine" style="z-index: 5; position: relative; right: -75%; ">
+            <button class="custom-btn btn-5"><span>back</span></button>
             </a>
+          
         </div>
+
+
+
         <div class="slide nine" id="nine">
         <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
           <button class="custom-btn btn-5"><span>back</span></button>
+
+          <a href="#five" style="z-index: 5; position: relative; right: -75%; ">
+            <button class="custom-btn btn-5"><span>Continue</span></button>
+            </a>
         </a>
 
 
@@ -437,12 +464,119 @@ $('#coin').on('click', function(){
         event.preventDefault();
         $('html, body').stop().animate({
                   scrollLeft: target.offset().left
+                }, 1000);
+      }
+
+
+
+      
+    });
+
+    // ตรงนี้ถ้ากดจาก หน้า 7 กลับมาต้องคลิก 2ครั้งถึงได้
+    $('a[href^="#six"]').on('click', function (event) {
+                var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250).animate({
+                  scrollLeft: target.offset().right
+                }, 1000);
+      }
+
+      
+
+    });
+
+
+
+
+  
+
+    $('a[href^="#nine"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+       
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollLeft: target.offset().left
                 }, 1000).animate({
                   scrollTop: target.offset().top
                 }, 250);
       }
+      
+
     });
 
+
+    $('a[href^="#five"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollLeft: target.offset().left
+                }, 1000).animate({
+                  scrollTop: target.offset().top
+                }, 250);
+      }
+      
+
+    });
+
+
+
+    // $('a[href^="#one"]').on('click', function (event) {
+    //   var target = $(this.getAttribute('href'));
+
+    //   if (target.length) {
+    //     event.preventDefault();
+    //     $('html, body').stop().animate({
+    //               scrollLeft: target.offset().left
+    //             }, 1000).animate({
+    //               scrollTop: target.offset().top
+    //             }, 250);
+    //   }
+      
+
+    // });
+
+
+
+    $('a[href^="#one"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollLeft: target.offset().left
+                }, 1000).animate({
+                  scrollTop: target.offset().top
+                }, 250);
+      }
+      
+
+    });
+
+
+    $('a[href^="#three"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollLeft: target.offset().right
+                }, 1000)
+      }
+      
+
+    });
+
+
+
+    
 
 
 /**/
