@@ -255,7 +255,7 @@
           <div class="side-b"></div>
         </div>
         <a href="#two" class="button" style="z-index: 5; position: absolute;left:47%; visibility: hidden; top: 80%;">
-          <button class="custom-btn btn-5"><span>Read More</span></button> </a>
+          <button class="custom-btn btn-5" id="abs"><span>Read More</span></button> </a>
         <h2 class="text"></h2>
 
         <script type="text/javascript" src="text.js" class="text1"></script>
@@ -336,6 +336,9 @@ $('#coin').on('click', function(){
       console.log('it is tails');
     }
   }, 100);
+  setTimeout(function() {
+    document.getElementById('abs').click();
+    }, 5000); 
 });
 });
 
