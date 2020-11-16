@@ -408,8 +408,6 @@ $('#coin').on('click', function(){
 });
 
 
-
-
     $('a[href^="#"]').on('click', function (event) {
       var target = $(this.getAttribute('href'));
 
@@ -417,9 +415,14 @@ $('#coin').on('click', function(){
         event.preventDefault();
         $('html, body').stop().animate({
                   scrollLeft: target.offset().left
-                }, 1000);
+                }, 1000).animate({
+                  scrollTop: target.offset().top
+                }, 250);
       }
     });
+
+
+
 /**/
     // $(window).on('scroll', function () {
     //   $('.slide').each(function () {
