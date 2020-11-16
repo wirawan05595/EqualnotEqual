@@ -33,6 +33,9 @@
       height: 100vh;
     }
 
+    
+    .flex-direction-column{display: flex;
+      flex-direction: column;}
     .wrapper {
       display: flex;
       flex-direction: row;
@@ -61,6 +64,12 @@
     .five {
       background-image: url("B4.png");
     }
+
+    .six{background-image: url("F0.png");}
+    .seven{background-image: url("F1.png");}
+    .eight{background-image: url("F3.png");}
+    .nine{background-image: url("F4.png");}
+
 
     .ice1 {
       -webkit-transition: all 2s ease;
@@ -259,53 +268,99 @@
         <script type="text/javascript" src="text.js" class="text1"></script>
       </div>
 
-      <div class="slide two" id="two">
-        
+      <div class="flex-direction-column" >
+          <div class="slide two" id="two">
 
-        <a href="#one" style="z-index: 5; position: relative; right: -5%;">
+            <a href="#one" style="z-index: 5; position: relative; right: -5%;">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a> 
+
+
+            <a href="#three" style="z-index: 5; position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>Continue</span></button>
+              </a>
+
+            <!-- <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
+
+
+
+            <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
+            <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;"> -->
+          </div>
+          <div class="slide six" id="six">
+
+            <a href="#one" style="z-index: 5; position: relative; right: -5%;">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a> 
+
+
+            <a href="#seven" style="z-index: 5; position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>Continue</span></button>
+              </a>
+          </div>
+      </div>
+
+
+
+      <div class="flex-direction-column"> 
+          <div class="slide three" id="three">
+
+            <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a>
+
+            <a href="#four" style="z-index: 5;position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>Continue</span></button>
+            </a>
+
+          </div>
+
+          <div class="slide seven" id="seven">
+
+            <a href="#six" style="z-index: 5;position: relative; right: -5%; ">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a>
+
+            <a href="#eight" style="z-index: 5;position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>Continue</span></button>
+            </a>
+
+          </div>
+      </div>
+
+
+      <div class="flex-direction-column"> 
+
+          <div class="slide four" id="four">
+            <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
+              <button class="custom-btn btn-5"><span>back</span></button>
+            </a>
+            <a href="#five" style="z-index: 5;position: relative; right: -75%; ">
+              <button class="custom-btn btn-5"><span>Continue</span></button>
+            </a>
+          </div>
+
+           <div class="slide eight" id="eight">
+        <a href="#seven" style="z-index: 5; position: relative; right: -5%; ">
           <button class="custom-btn btn-5"><span>back</span></button>
-        </a> 
-
-
-        <a href="#three" style="z-index: 5; position: relative; right: -75%; ">
+        </a>
+        <a href="#nine" style="z-index: 5;position: relative; right: -75%; ">
           <button class="custom-btn btn-5"><span>Continue</span></button>
+        </a>
+      </div>
+
+      </div>
+
+      <div class="flex-direction-column"> 
+        <div class="slide five" id="five">
+          <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
+            <button class="custom-btn btn-5"><span>back</span></button>
           </a>
-
-        <!-- <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
-
-
-
-        <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
-        <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;"> -->
-
-
-
-      </div>
-
-
-      <div class="slide three" id="three">
-
-        <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
-          <button class="custom-btn btn-5"><span>back</span></button>
-        </a>
-
-        <a href="#four" style="z-index: 5;position: relative; right: -75%; ">
-          <button class="custom-btn btn-5"><span>Continue</span></button>
-        </a>
-
-      </div>
-
-      <div class="slide four" id="four">
-        <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
-          <button class="custom-btn btn-5"><span>back</span></button>
-        </a>
-        <a href="#five" style="z-index: 5;position: relative; right: -75%; ">
-          <button class="custom-btn btn-5"><span>Continue</span></button>
-        </a>
-      </div>
-
-
-      <div class="slide five" id="five">
+          <a href="#six" style="z-index: 5; position: relative; right: -75%; ">
+            <button class="custom-btn btn-5"><span>Continue</span></button>
+            </a>
+        </div>
+        <div class="slide nine" id="nine">
         <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
           <button class="custom-btn btn-5"><span>back</span></button>
         </a>
@@ -313,8 +368,23 @@
 
       </div>
 
+      </div>
+      
+    </div><!-- wrapper -->
+      
 
-    </div>
+       
+
+
+      
+
+
+
+
+      
+
+       
+
   </div>
 
 
@@ -346,11 +416,11 @@ $('#coin').on('click', function(){
       if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
-          scrollLeft: target.offset().left
-        }, 1000);
+                  scrollLeft: target.offset().left
+                }, 1000);
       }
     });
-
+/**/
     // $(window).on('scroll', function () {
     //   $('.slide').each(function () {
     //     if ($(window).scrollLeft() >= $(this).offset().left) {
