@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         if (typeof dataText[i] == 'undefined') {
             document.querySelector("h2").style.visibility = 'hidden';
             document.querySelector(".button").style.visibility = 'visible';
+            document.queryCommandValue
             //end text
         }
 
