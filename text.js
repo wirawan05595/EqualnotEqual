@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     , '<br>เป็นปัญหาเรื้อรัง<br>ที่รักษาไม่หายเป็นเวลานาน'
     , '<br>คนมักพูดกันว่า<br>เหรียญมักมีสองด้านเสมอ', 'เเล้วถ้าเปรียบว่า<br>เหรียญนี้จะกำหนด<br>โชคชะตาชีวิตที่คุณจะได้เกิดมา'
     , '<br>อยากลองหน่อยมั้ย<br>ว่าคุณจะได้รับมันอย่างไร'];
-
     function typeWriter(text, i, fnCallback) {
         if (i < (text.length)) {
             document.querySelector("h2").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
@@ -19,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
         if (typeof dataText[i] == 'undefined') {
             document.querySelector("h2").style.visibility = 'hidden';
             document.querySelector(".button").style.visibility = 'visible';
+            document.querySelector("#coin").style.visibility = 'visible';
             document.queryCommandValue
             //end text
         }
