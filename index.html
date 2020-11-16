@@ -84,6 +84,10 @@
       font-size: 60px;
     }
 
+    .text2{
+      animation: coincoin 2s ease-in-out;
+    }
+
     .custom-btn {
   width: 130px;
   height: 40px;
@@ -144,6 +148,7 @@
 
 
 #coin {
+  animation: coincoin 2s ease-in-out;
   position: absolute;
   margin: 0 auto;
   width: 500px;
@@ -222,9 +227,11 @@
   to { -webkit-transform: rotateY(1980deg); -moz-transform: rotateY(1980deg); transform: rotateY(1980deg); }
 }
 
-
-
-    
+@-webkit-keyframes coincoin {
+  from { opacity: 0;}
+  to { opacity: 1; }
+}
+  
 
     @keyframes caret {
       50% {
@@ -250,9 +257,17 @@
         <img src="BG_L.png" style="z-index: 2; width: 100%;height: 100%; position: absolute;float: left; ">
 
         <div id="coin" style="z-index: 5; position: absolute; left: 0;
-    right: 0; visibility: hidden; top: 20%;">
+    right: 0; visibility: hidden; top: 10%;">
+              
           <div class="side-a"></div>
           <div class="side-b"></div>
+          <h1 style="position: relative; top: 100%; 
+          text-align: center;
+      color: antiquewhite;
+      margin: auto auto;
+      display: block;
+      font-size: 60px;" class="text2">ลองกดที่เหรียญดูสิ</h1>
+
         </div>
         <a href="#two" class="button" style="z-index: 5;opacity: 0; position: absolute;left:47%; visibility: hidden; top: 80%;">
           <button class="custom-btn btn-5" id="abs"><span>Read More</span></button> </a>
@@ -321,6 +336,8 @@
 
 
   <script>
+
+
           jQuery(document).ready(function($){
 
 $('#coin').on('click', function(){
