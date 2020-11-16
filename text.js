@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-    var dataText = ['คุณรู้หรือไม่ ?<br>ไทยติดอันดับ 10 <br>'];
+    var dataText = ['คุณรู้หรือไม่ ?<br>ไทยติดอันดับ 10 <br>ประเทศที่มีความเหลื่อมล้ำด้าน<br> "ความมั่งคั่ง" มากที่สุดในโลก'
+    , '<br>เป็นปัญหาเรื้อรัง<br>ที่รักษาไม่หายเป็นเวลานาน'
+    , '<br>คนมักพูดกันว่า<br>เหรียญมักมีสองด้านเสมอ', 'เเล้วถ้าเปรียบว่า<br>เหรียญนี้จะกำหนด<br>โชคชะตาชีวิตที่คุณจะได้เกิดมา'
+    , '<br>อยากลองหน่อยมั้ย<br>ว่าคุณจะได้รับมันอย่างไร'];
     function typeWriter(text, i, fnCallback) {
         if (i < (text.length)) {
             document.querySelector("h2").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
