@@ -442,6 +442,65 @@
                 transform: perspective(500px) translate3d(0, 0, 0);
             }
         }
+.sprite {
+  width: 460px;
+  height: 800px;
+  margin-top: 40px;
+}
+
+.right {
+  background-image: url(img/pSR.png);
+}
+
+.left {
+  background-image: url(img/pSL.png);
+}
+
+.walk-right {
+  background-image: url(img/p1.png);
+  -webkit-animation: walk .9s steps(4) infinite;
+  -moz-animation: walk .9s steps(4) infinite;
+  -ms-animation: walk .9s steps(4) infinite;
+  -o-animation: walk .9s steps(4) infinite;
+  animation: walk .9s steps(4) infinite;
+}
+
+.walk-left {
+  background-image: url(img/pl.png);
+  -webkit-animation: walk .9s steps(4) infinite;
+  -moz-animation: walk .9s steps(4) infinite;
+  -ms-animation: walk .9s steps(4) infinite;
+  -o-animation: walk .9s steps(4) infinite;
+  animation: walk .9s steps(4) infinite;
+}
+
+@-webkit-keyframes walk {
+  from { background-position: 0px; }
+  to { background-position: -1944px; }
+}
+@-moz-keyframes walk {
+  from { background-position: 0px; }
+  to { background-position: -1944px; }
+}
+@-ms-keyframes walk {
+  from { background-position: 0px; }
+  to { background-position: -1944px; }
+}
+@-o-keyframes walk {
+  from { background-position: 0px; }
+  to { background-position: -1944px; }
+}
+
+@-keyframes walk {
+  from { background-position: 0px; }
+  to { background-position: -1944px; }
+}
+    @keyframes caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+
   </style>
 </head>
 
@@ -548,6 +607,7 @@
                 ทางไปทำงาน ไปเรียน ซึ่งทำให้เกิดการกุระจุกตัวในช่วงเวลาที่จำกัด ทำให้เป็นไปได้ยาก
                 ที่จะสามารถบริหารจัดการปริมาณของรถขนส่งสาธารณะได้เพียงพอกับ
                 ความต้องการ ขณะที่ในหลายประเทศวางแผนให้มีการกระจายช่วงเวลาพีคเพื่อรองรับการเดินทาง</p>
+           <div style="transform: scale(0.25);bottom: -30%; position: absolute"> <div class="sprite right"></div> </div>
           </div>
             <a href="#four" style="z-index: 5;position: relative; right: -75%; ">
               <button class="custom-btn btn-5"><span>Continue</span></button>
@@ -575,7 +635,9 @@
                 โรงพยาบาลของกระทรวงสรารณสุข 896 แห่ง จึงเป็นส่วนที่รับภาระหนักที่สุด สภาพ
                 คนไข้ที่ลั้นโรงพยาบาลรัฐ
                 ทำให้บุคลากรไม่สามารถดูแลคุณภาพบริการได้เท่าที่ควร</p>
+          
           </div>
+          
             <a href="#eight" style="z-index: 5;position: relative; right: -75%; ">
               <button class="custom-btn btn-5"><span>Continue</span></button>
             </a>
@@ -919,6 +981,81 @@ $('#coin').on('click', function(){
     function myFunction() {
       document.getElementById("ice1").style.opacity = 0;
     }
+
+    (function() {
+
+  var sprite = document.querySelector('.sprite'),
+    key = {left: false, right: false},
+    trans = 0,
+    property = getTransformProperty(sprite);
+    
+   
+  function getTransformProperty(element) {
+      var properties = [
+          'transform',
+          'WebkitTransform',
+          'msTransform',
+          'MozTransform',
+          'OTransform'
+      ];
+      var p;
+      while (p = properties.shift()) {
+          if (typeof element.style[p] != 'undefined') {
+              return p;
+          }
+      }
+      return false;
+  }
+
+  function translate() {
+    sprite.style[property] = 'translateX(' + trans + 'px)';
+  
+  }
+
+  function walk(e) {
+    var keyCode = e.keyCode;
+    if (keyCode === 39) {
+      key.right = true;
+    } else if (keyCode === 37) {
+      key.left = true;
+    }
+    if (key.right === true) {
+      trans += 20;
+      translate();
+      sprite.classList.remove('left');
+      sprite.classList.add('right');
+      sprite.classList.add('walk-right');
+     
+    } else if (key.left === true) {
+      trans -= 20;
+      translate();
+      sprite.classList.remove('right');
+      sprite.classList.add('left');
+      sprite.classList.add('walk-left');
+     
+    }
+  }
+
+  function stop(e) {
+    var keyCode = e.keyCode;
+    if (keyCode === 39) {
+      key.right = false;
+    } else if (keyCode === 37) {
+      key.left = false;
+    }
+    if (key.right === false) {
+      sprite.classList.remove('walk-right');
+    
+    } if (key.left === false) {
+      sprite.classList.remove('walk-left');
+
+    }
+  }
+
+  document.addEventListener('keydown', walk, false);
+  document.addEventListener('keyup', stop, false);
+
+})();
 
   </script>
 </body>
