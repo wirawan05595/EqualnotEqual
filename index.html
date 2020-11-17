@@ -253,6 +253,140 @@
     height: 100%;
     transform: rotateY(180deg);
 }
+
+
+.star2{
+    margin: 0 0 12px;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+.star2.active {
+    transform: rotateY(180deg);
+  }
+.face2 img, .back2 img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+} 
+.face2{
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    position: absolute;
+    overflow: hidden;
+}
+.back2{
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+
+
+.star3{
+    margin: 0 0 12px;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+.star3.active {
+    transform: rotateY(180deg);
+  }
+.face3 img, .back3 img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+} 
+.face3{
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    position: absolute;
+    overflow: hidden;
+}
+.back3{
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+
+.star4{
+    margin: 0 0 12px;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+.star4.active {
+    transform: rotateY(180deg);
+  }
+.face4 img, .back4 img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+} 
+.face4{
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    position: absolute;
+    overflow: hidden;
+}
+.back4{
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+
+.star5{
+    margin: 0 0 12px;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+.star5.active {
+    transform: rotateY(180deg);
+  }
+.face5 img, .back5 img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+} 
+.face5{
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    position: absolute;
+    overflow: hidden;
+}
+.back5{
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+
+
+.star6{
+    margin: 0 0 12px;
+    transition: all 0.7s ease-in-out;
+    transform-style: preserve-3d;
+}
+.star6.active {
+    transform: rotateY(180deg);
+  }
+.face6 img, .back6 img{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+} 
+.face6{
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    position: absolute;
+    overflow: hidden;
+}
+.back6{
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+
 @-webkit-keyframes flipHeads {
   from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
   to { -webkit-transform: rotateY(1800deg); -moz-transform: rotateY(1800deg); transform: rotateY(1800deg); }
@@ -320,7 +454,7 @@
       <div class="slide one" id="one">
         
 
-
+        
         
 
         <img src="BG_R.png" style="z-index: 1; width: 100%;height: 100%; position: absolute;float: right;">
@@ -372,8 +506,8 @@
           </div>
           <div class="slide six" id="six">
 
-            <a href="#one" style="z-index: 5; position: relative; right: -5%;">
-              <button class="custom-btn btn-5"><span>back</span></button>
+            <a href="#five" style="z-index: 5; position: relative; right: -5%;">
+              <button class="custom-btn btn-5" id="fivefive"><span>back</span></button>
             </a> 
             <div class="center">
               <p id="text">ด้านที่อยู่อาศัย
@@ -390,9 +524,20 @@
       </div>
 
 
-
+       <!-- หน้า3 -->
       <div class="flex-direction-column"> 
           <div class="slide three" id="three">
+
+            <div class="star" style="width: 350px; height: 200px; float: right;">
+              <div class="face" ><img src="2.png" /></div>
+              <div class="back" ><img src="1.png" /></div>
+            </div>
+
+
+            <a href="#seven" class="button" style="z-index: 1;opacity: 0; position: absolute;">
+              <button class="custom-btn btn-5" id="Switch"><span>Read More</span></button> </a>
+
+
 
             <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
               <button class="custom-btn btn-5"><span>back</span></button>
@@ -409,8 +554,16 @@
             </a>
 
           </div>
-
+               <!-- หน้า7 -->
           <div class="slide seven" id="seven">
+
+            <div class="star2" style="width: 350px; height: 200px; float: right;">
+              <div class="face2" ><img src="1.png" /></div>
+              <div class="back2" ><img src="2.png" /></div>
+            </div>
+
+            <a href="#three" class="button"   style="z-index: 1;opacity: 0; position: absolute;">
+              <button class="custom-btn btn-5" id="Switch2"><span>Read More</span></button> </a>
 
             <a href="#six" style="z-index: 5;position: relative; right: -5%; ">
               <button class="custom-btn btn-5"><span>back</span></button>
@@ -432,11 +585,23 @@
 
 
       <div class="flex-direction-column"> 
-
+            <!-- หน้า4 -->
           <div class="slide four" id="four">
+
+            <div class="star3" style="width: 350px; height: 200px; float: right;">
+              <div class="face3" ><img src="2.png" /></div>
+              <div class="back3" ><img src="1.png" /></div>
+            </div>
+
+
+            <a href="#eight" class="button" style="z-index: 1;opacity: 0; position: absolute;">
+              <button class="custom-btn btn-5" id="Switch3"><span>Read More</span></button> </a>
+
+
             <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
               <button class="custom-btn btn-5"><span>back</span></button>
             </a>
+
             <div class="center">
               <p id="text">ยินดีด้วยคุณได้คนรวย
                 แต่คุณคงกดสลับมาสินะ แต่ไม่เป็นไร
@@ -449,8 +614,19 @@
               <button class="custom-btn btn-5"><span>Continue</span></button>
             </a>
           </div>
-
+             <!-- หน้า8 -->
            <div class="slide eight" id="eight">
+
+            <div class="star4" style="width: 350px; height: 200px; float: right;">
+              <div class="face4" ><img src="1.png" /></div>
+              <div class="back4" ><img src="2.png" /></div>
+            </div>
+
+
+            <a href="#four" class="button" style="z-index: 1;opacity: 0; position: absolute;">
+              <button class="custom-btn btn-5" id="Switch4"><span>Read More</span></button> </a>
+
+
         <a href="#seven" style="z-index: 5; position: relative; right: -5%; ">
           <button class="custom-btn btn-5"><span>back</span></button>
         </a>
@@ -469,7 +645,19 @@
       </div>
 
       <div class="flex-direction-column"> 
+        <!-- หน้า5 -->
         <div class="slide five" id="five">
+
+          <div class="star5" style="width: 350px; height: 200px; float: right;">
+            <div class="face5" ><img src="2.png" /></div>
+            <div class="back5" ><img src="1.png" /></div>
+          </div>
+
+
+          <a href="#nine" class="button" style="z-index: 1;opacity: 0; position: absolute;">
+            <button class="custom-btn btn-5" id="Switch5"><span>Read More</span></button> </a>
+
+
           <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
             <button class="custom-btn btn-5"><span>back</span></button>
           </a>
@@ -483,7 +671,19 @@
             <button class="custom-btn btn-5"><span>Continue</span></button>
             </a>
         </div>
+        <!-- หน้า 9 -->
         <div class="slide nine" id="nine">
+
+
+          <div class="star6" style="width: 350px; height: 200px; float: right;">
+            <div class="face6" ><img src="2.png" /></div>
+            <div class="back6" ><img src="1.png" /></div>
+          </div>
+
+
+          <a href="#five" class="button" style="z-index: 1;opacity: 0; position: absolute;">
+            <button class="custom-btn btn-5" id="Switch6"><span>Read More</span></button> </a>
+
         <a href="#eight" style="z-index: 5; position: relative; right: -5%; ">
           <button class="custom-btn btn-5"><span>back</span></button>
         </a>
@@ -512,6 +712,89 @@
 
 
   <script>
+              
+    $(".star").click(function(){
+      $(".star").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch').click();
+    
+    }, 500);
+
+
+    setTimeout(function() {
+      $(".star").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+    $(".star2").click(function(){
+      $(".star2").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch2').click();
+    }, 500);
+    setTimeout(function() {
+      $(".star2").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+    $(".star3").click(function(){
+      $(".star3").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch3').click();
+    }, 500);
+    setTimeout(function() {
+      $(".star3").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+    $(".star4").click(function(){
+      $(".star4").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch4').click();
+    }, 500);
+    setTimeout(function() {
+      $(".star4").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+    $(".star5").click(function(){
+      $(".star5").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch5').click();
+    }, 500);
+    setTimeout(function() {
+      $(".star5").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+    $(".star6").click(function(){
+      $(".star6").toggleClass("active");
+      setTimeout(function() {
+    document.getElementById('Switch6').click();
+    }, 500);
+    setTimeout(function() {
+      $(".star6").toggleClass("active");
+    
+    }, 2000);
+       
+    });
+
+
+
 
 
           jQuery(document).ready(function($){
@@ -545,8 +828,79 @@ $('#coin').on('click', function(){
                   scrollLeft: target.offset().left
                 }, 1000).animate({
                   scrollTop: target.offset().top
+                }, 250).animate({
+                  scrollTop: target.offset().right
                 }, 250);
       }
+    });
+
+
+    $( "#Switch" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
+    });
+
+
+    $( "#Switch2" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
+    });
+
+    $( "#Switch3" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
+    });
+
+
+    $( "#Switch4" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
+    });
+
+    $( "#Switch5" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
+    });
+
+    $( "#Switch6" ).on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+                  scrollTop: target.offset().top
+                }, 250);
+              }
     });
 
 
