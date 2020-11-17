@@ -442,6 +442,7 @@
                 transform: perspective(500px) translate3d(0, 0, 0);
             }
         }
+
 .sprite {
   width: 460px;
   height: 800px;
@@ -501,6 +502,75 @@
       }
     }
 
+
+        .cloud {
+            z-index: 1;
+            width: 10%;
+            height: 8%;
+            left:200%;
+            position: absolute;
+            animation: cloud 20s linear 2s infinite alternate; 
+          }
+        @keyframes cloud {
+            0%   {left:200%;}
+            100%  {left:450%}
+          }
+          .cloud1 {
+            z-index: 1;
+            width: 10%;
+            height: 8%;
+            left:450%;
+            position: absolute;
+            animation: cloud1 20s linear 2s infinite alternate; 
+          }
+        @keyframes cloud1 {
+            0%   {left:450%;}
+            100%  {left:200%}
+          }
+          .cloud2 {
+            z-index: 1;
+            width: 10%;
+            height: 8%;
+            left:250%;
+            position: absolute;
+            animation: cloud2 20s linear 2s infinite alternate; 
+          }
+        @keyframes cloud2 {
+            0%   {left:250%;}
+            25% {left: 200%;}
+            75%  {left:450%}
+            100% {left: 250%;}
+          }
+          
+          .cloud3 {
+            z-index: 1;
+            width: 10%;
+            height: 8%;
+            left:300%;
+            position: absolute;
+            animation: cloud3 25s linear 2s infinite alternate; 
+          }
+        @keyframes cloud3 {
+            0%   {left: 300%;}
+            20% {left: 450%;}
+            80%  {left:200%}
+            100% {left: 300%;}
+          }
+          .cloud4 {
+            z-index: 1;
+            width: 10%;
+            height: 8%;
+            left:350%;
+            position: absolute;
+            animation: cloud4 25s linear 2s infinite alternate; 
+          }
+        @keyframes cloud4 {
+            0%   {left: 350%;}
+            20% {left: 450%;}
+            80%  {left:200%}
+            100% {left: 350%;}
+          }
+
   </style>
 </head>
 
@@ -543,27 +613,38 @@
 
       <div class="flex-direction-column" >
           <div class="slide two" id="two">
-
+            <img class="cloud" style="top: 2%;" src="img/cloud.png" />
+            <img class="cloud1" style="top: 6%;" src="img/cloud1.png" />
+            <img class="cloud2" style="top: 8%;" src="img/cloud.png" />
+            <img class="cloud3" style="top: 10%;" src="img/cloud1.png" />
+            <img class="cloud4" style="top: 4%;" src="img/cloud.png" />
             <a href="#one" style="z-index: 5; position: relative; right: -5%;">
               <button class="custom-btn btn-5"><span>back</span></button>
             </a> 
-            <div class="center">
-              <p id="text">ยินดีด้วยคุณได้คนจนแต่ไม่เป็นอะไร
-                หรอกนะ เพราะคนไทยส่วนใหญ่กว่า
-                90% ก็เป็นคนจนกันทั้งนั้นแหละ
-                ประเทศไทย คนรวยเพียง 1% ครองความมั่งคั่ง ในประเทศสูงถึง 58.0% ตัวเลขนี้ชี้ชัดว่าทำไม
-                ประเทศไทยถึงเป็น 1 ใน 10 ประเทศ ที่มีความหลื่อมล้ำ ด้นความมั่งคั่งมากที่สุดในโลก</p>
-          </div>
 
-            <a href="#three" style="z-index: 5; position: relative; right: -75%; ">
-              <button class="custom-btn btn-5"><span>Continue</span></button>
-              </a>
+            <p style="left: 45%; position: relative; text-align: left; top: 15%; background-color:rgba(102, 102, 153, 0.5);
+            border-radius: 30px; width: 50%; height: 55%;
+             color: #FFF; z-index: 10;" ><br>&nbsp;&nbsp;&nbsp;ยินดีด้วยคุณได้คนจน!!<br>&nbsp;&nbsp;&nbsp;แต่ไม่เป็นอะไร
+              หรอกนะ เพราะคนไทยส่วนใหญ่กว่า
+              90% <br> &nbsp;&nbsp;&nbsp;ก็เป็นคนจนกันทั้งนั้นแหละ
+              ประเทศไทย คนรวยเพียง 1% <br>&nbsp;&nbsp;&nbsp;ครองความมั่งคั่ง ในประเทศสูงถึง 58.0% ตัวเลขนี้ชี้ชัด<br>
+              &nbsp;&nbsp;&nbsp;ว่าทำไม
+              ประเทศไทยถึงเป็น 1 ใน 10 ประเทศ ที่มีความหลื่อมล้ำ <br>&nbsp;&nbsp;&nbsp;ด้นความมั่งคั่งมากที่สุดในโลก</p>
+
+          <a href="#three" style="z-index: 11; position: absolute; right: -80%; top: 70%;">
+            <button class="custom-btn btn-5" style="width: 200%; height: 200%; font-size: 30px;"><span>Continue</span></button>
+            </a>
 
             <!-- <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
             <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
             <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;"> -->
           </div>
           <div class="slide six" id="six">
+            <img class="cloud" style="top: 106%;" src="img/cloud.png" />
+            <img class="cloud1" style="top: 108%;" src="img/cloud2.png" />
+            <img class="cloud2" style="top: 102%;" src="img/cloud.png" />
+            <img class="cloud3" style="top: 110%;" src="img/cloud2.png" />
+            <img class="cloud4" style="top: 115%;" src="img/cloud.png" />
 
             <a href="#five" style="z-index: 5; position: relative; right: -5%;">
               <button class="custom-btn btn-5" id="fivefive"><span>back</span></button>
