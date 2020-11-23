@@ -429,6 +429,16 @@
         border-color: transparent;
       }
     }
+    @keyframes an{
+            from{
+                opacity: 0;
+                transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+            }
+            to{
+                opacity: 1;
+                transform: perspective(500px) translate3d(0, 0, 0);
+            }
+        }
     
 
     .center{
@@ -751,7 +761,7 @@
               </div>
             </a> 
 
-            <p style="left: 45%; position: relative; text-align: left; top: 15%; background-color:rgba(102, 102, 153, 0.5);
+            <p id="trect" style="left: 45%; position: relative; text-align: left; top: 15%; background-color:rgba(102, 102, 153, 0.5);
             border-radius: 30px; width: 50%; height: 36%;
              color: #FFF; z-index: 10;" ><br>&nbsp;&nbsp;&nbsp;ยินดีด้วยคุณได้คนจน !!
              <br>&nbsp;&nbsp;&nbsp;แต่ไม่เป็นอะไรหรอกนะ เพราะคนไทยส่วนใหญ่กว่า90% 
@@ -760,7 +770,7 @@
              <br> &nbsp;&nbsp;&nbsp;ตัวเลขนี้ชี้ชัดว่า ทำไมประเทศไทยถึงเป็น 1 ใน 10 ประเทศ 
              <br> &nbsp;&nbsp;&nbsp;ที่มีความหลื่อมล้ำด้านความมั่งคั่งมากที่สุดในโลก</p>
 
-          <a href="#three" style="z-index: 11; position: absolute; right: -90%; top: 50%;">
+          <a id="abss"href="#three" style="z-index: 11; position: absolute; right: -90%; top: 50%;">
 
             <div class="wB">
               <div class="button _2">
@@ -1389,6 +1399,32 @@ function isInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+function f1() {
+      for(let i = 0; i < text.innerText.length; i++)
+        {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for(let i = 0; i < length; i++)
+        {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+}
+var text = document.getElementById('trect');
+        var newDom = '';
+        var animationDelay = 6;
+
+       
+        window.onload = function() {
+            document.getElementById("abs").onclick = function fun() {
+              f1();
+             
+        //validation code to see State field is mandatory.  
+    }
 }
   </script>
 </body>
