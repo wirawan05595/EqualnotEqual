@@ -543,7 +543,7 @@
 .sprite {
   width: 460px;
   height: 800px;
-  margin-top: 40px;
+  
 }
 
 .right {
@@ -707,6 +707,40 @@
         border-color: transparent;
       }
     }
+
+.spr {
+  width: 460px;
+  height: 800px;
+  
+}
+
+.rightr {
+  background-image: url(img/RSR.png);
+}
+
+.leftr {
+  background-image: url(img/RSL.png);
+}
+
+.walk-rightr {
+  background-image: url(img/rr.png);
+  -webkit-animation: walk .9s steps(4) infinite;
+  -moz-animation: walk .9s steps(4) infinite;
+  -ms-animation: walk .9s steps(4) infinite;
+  -o-animation: walk .9s steps(4) infinite;
+  animation: walk .9s steps(4) infinite;
+}
+
+.walk-leftr {
+  background-image: url(img/l.png);
+  -webkit-animation: walk .9s steps(4) infinite;
+  -moz-animation: walk .9s steps(4) infinite;
+  -ms-animation: walk .9s steps(4) infinite;
+  -o-animation: walk .9s steps(4) infinite;
+  animation: walk .9s steps(4) infinite;
+}
+
+
   </style>
 </head>
 
@@ -826,6 +860,7 @@
 
        <!-- หน้า3 -->
       <div class="flex-direction-column"> 
+
           <div class="slide three" id="three">
             
             <img class="cloud" style="top: 2%;" src="img/cloud.png" />
@@ -873,7 +908,7 @@
 
 
             </a>
-            <div style="transform: scale(0.25);top: 35%; position: absolute"> <div class="sprite right"></div> </div>
+            </div> <div class="DdivSprite"  style="transform:  scale(0.2);bottom: -65vh; position: absolute"> <div class="sprite right"></div> 
           </div>
           
                <!-- หน้า7 คนรวย -->
@@ -913,8 +948,9 @@
                 </div>
               </div>
             </a>
-
+              </div> <div class="DddivSprite"  style="transform:  scale(0.2);bottom: -165vh; position: absolute"> <div class="spr rightr"></div> 
           </div>
+           <div class="slide eightad" ></div>
       </div>
 
 
@@ -1305,10 +1341,16 @@ $('#coin').on('click', function(){
     }
 (function() {
   var AtSprite = 3;
+  var AtSpr = 7;
+  var transy = 0;
   var sprite = document.querySelector('.sprite'),
     key = {left: false, right: false},
     trans = 0,
     property = getTransformProperty(sprite);
+  var spr = document.querySelector('.spr'),
+    keyr = {left: false, right: false},
+    transr = 0,
+    propertyr = getTransformProperty(spr);
 
   function getTransformProperty(element) {
       var properties = [
@@ -1331,7 +1373,13 @@ $('#coin').on('click', function(){
     sprite.style[property] = 'translateX(' + trans + 'px)';
   }
 
+  function translater() {
+    spr.style[propertyr] = 'translateX(' + transr + 'px)';
+  }
+
+
   function walk(e) {
+    
     var keyCode = e.keyCode;
     if (keyCode === 39) {
       key.right = true;
@@ -1351,13 +1399,44 @@ $('#coin').on('click', function(){
       sprite.classList.add('left');
       sprite.classList.add('walk-left');
     }
-    if (keyCode=== 39 || keyCode=== 37 ) {
+    if ((keyCode=== 39 || keyCode=== 37 )&& (isInViewport("slide three")|| isInViewport("slide four")  ||isInViewport("slide five")) ) {
       if (isCollide(document.getElementsByClassName("slide three")[0],document.getElementsByClassName("sprite")[0])) 
-        {if (AtSprite != 3) { AtSprite =3;document.getElementsByClassName("custom-btn btn-5")[12].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate();}
+        {if (AtSprite != 3) { AtSprite =3;document.getElementsByClassName("button _2")[4].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate();}
       if (isCollide(document.getElementsByClassName("slide four")[0],document.getElementsByClassName("sprite")[0])) 
-        {if (AtSprite != 4) { AtSprite =4;document.getElementsByClassName("custom-btn btn-5")[7].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
+        {if (AtSprite != 4) { AtSprite =4;document.getElementsByClassName("button _2")[3].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
       if (isCollide(document.getElementsByClassName("slide five")[0],document.getElementsByClassName("sprite")[0])) 
-        {if (AtSprite != 5) { AtSprite =5;document.getElementsByClassName("custom-btn btn-5")[13].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
+        {if (AtSprite != 5) { AtSprite =5;document.getElementsByClassName(" button _2")[5].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
+
+    }
+  }
+  function walkr(e) {
+   
+    var keyCode = e.keyCode;
+    if (keyCode === 39) {
+      keyr.right = true;
+    } else if (keyCode === 37) {
+      keyr.left = true;
+    }
+    if (keyr.right === true) {
+      transr += 10;
+      translater();
+      spr.classList.remove('leftr');
+      spr.classList.add('rightr');
+      spr.classList.add('walk-rightr');
+    } else if (keyr.left === true) {
+      transr -= 10;
+      translater();
+      spr.classList.remove('rightr');
+      spr.classList.add('leftr');
+      spr.classList.add('walk-leftr');
+    }
+    if ((keyCode=== 39 || keyCode=== 37 )&& (isInViewport("slide seven")|| isInViewport("slide eight")  ||isInViewport("slide nine")) ) {
+      if (isCollide(document.getElementsByClassName("slide seven")[0],document.getElementsByClassName("spr")[0])) 
+        {if (AtSpr != 7) { AtSpr =7;document.getElementsByClassName("button _22")[4].click(); if (keyr.right === true) {transr += 150;} else {transr -= 150;}} ;translater();}
+      if (isCollide(document.getElementsByClassName("slide eight")[0],document.getElementsByClassName("spr")[0])) 
+        {if (AtSpr != 8) { AtSpr =8;document.getElementsByClassName("button _22")[3].click(); if (keyr.right === true) {transr += 150;} else {transr -= 150;}} ;translater(); }
+      if (isCollide(document.getElementsByClassName("slide nine")[0],document.getElementsByClassName("spr")[0])) 
+        {if (AtSpr != 9) { AtSpr =9;document.getElementsByClassName(" button _22")[5].click(); if (keyr.right === true) {transr += 150;} else {transr -= 150;}} ;translater(); }
 
     }
   }
@@ -1376,8 +1455,24 @@ $('#coin').on('click', function(){
     }
   }
 
+  function stopr(e) {
+    var keyCode = e.keyCode;
+    if (keyCode === 39) {
+      keyr.right = false;
+    } else if (keyCode === 37) {
+      keyr.left = false;
+    }
+    if (keyr.right === false) {
+      spr.classList.remove('walk-rightr');
+    } if (keyr.left === false) {
+      spr.classList.remove('walk-leftr');
+    }
+  }
+
   document.addEventListener('keydown', walk, false);
   document.addEventListener('keyup', stop, false);
+  document.addEventListener('keydown', walkr, false);
+  document.addEventListener('keyup', stopr, false);
 
 })();
 function isCollide(a, b) {
@@ -1392,7 +1487,8 @@ function isCollide(a, b) {
     );
 }
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
+  var a = document.getElementsByClassName(element)[0];
+    const rect = a.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.left >= 0 &&
@@ -1426,7 +1522,25 @@ var text = document.getElementById('trect');
         //validation code to see State field is mandatory.  
     }
 }
+var transy = -65;
+while (isCollide(document.getElementsByClassName("slide seven")[0],document.getElementsByClassName("DdivSprite")[0])) 
+    {transy += 2;
+    document.getElementsByClassName("DdivSprite")[0].style.bottom = transy+"vh";
+    console.log("1")
+    }
+    transy += 2;
+    document.getElementsByClassName("DdivSprite")[0].style.bottom = transy+"vh";
+var transy = -165;
+while (isCollide(document.getElementsByClassName("slide eightad")[0],document.getElementsByClassName("DddivSprite")[0])) 
+    {transy += 2;
+    document.getElementsByClassName("DddivSprite")[0].style.bottom = transy+"vh";
+    console.log("2")
+    }
+    transy += 2;
+    document.getElementsByClassName("DddivSprite")[0].style.bottom = transy+"vh";
+
   </script>
+}
 </body>
 
 </html>
