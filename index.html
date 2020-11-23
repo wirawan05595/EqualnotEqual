@@ -44,6 +44,8 @@
     }
 
     .one {
+      max-width: 100%;
+    height: auto!important;
 
       background-image: url("Background.png");
       background-attachment: fixed;
@@ -51,20 +53,29 @@
 
     .two {
       background-image: url("img/W1.jpg");
-      background-attachment: fixed;
+      max-width: 100%;
+      height: 100vh;
+
     }
 
     .three {
       background-image: url("img/W2.jpg");
+      max-width: 100%;
+      height: 100vh;
     }
 
     .four {
       background-image: url("img/W3.jpg");
+      max-width: 100%;
+      height: 100vh;
     }
 
     .five {
       background-image: url("img/W4.jpg");
+      max-width: 100%;
+      height: 100vh;
     }
+
 
     .six{background-image: url("img/WW1.jpg");}
     .seven{background-image: url("img/WW2.jpg");}
@@ -89,7 +100,7 @@
       color: antiquewhite;
       position: relative;
       margin: auto auto;
-      top: 15%;
+      top: 5%;
       display: block;
       font-size: 60px;
     }
@@ -230,6 +241,8 @@
 }
 
 .star{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -256,6 +269,8 @@
 
 
 .star2{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -283,6 +298,8 @@
 
 
 .star3{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -309,6 +326,8 @@
 
 
 .star4{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -335,6 +354,8 @@
 
 
 .star5{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -541,6 +562,115 @@
   animation: walk .9s steps(4) infinite;
 }
 
+
+
+
+:root {
+  --height: 100px;
+  --width: 200px;
+}
+
+.wB {
+  width: 150px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  border-radius:28px;
+  position: absolute;
+  width: 150px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 ;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0, 0.22, 0.3, 1);
+}
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.button span {
+  color: #fff;
+  font-size: 1rem;
+  z-index: 10;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.button._2 {
+  background: #8e44ad;
+}
+
+.button .back {
+  position: absolute;
+  width: 0;
+  height: 0;
+  filter: url(#filter);
+  border-radius: 50%;
+  z-index: 5;
+  transition: all 2.5s cubic-bezier(0.1, 0.22, 0.3, 1);
+}
+.button._2 .back {
+  right: -50%;
+  top: -50%;
+  background: #e5801c;
+}
+
+.button:hover .back {
+  width: calc(2 * var(--width));
+  height: calc(2 * var(--height));
+}
+
+
+
+
+
+.button._22 {
+  background: #FF9933;
+}
+
+.button .back {
+  position: absolute;
+  width: 0;
+  height: 0;
+  filter: url(#filter);
+  border-radius: 50%;
+  z-index: 5;
+  transition: all 2.5s cubic-bezier(0.1, 0.22, 0.3, 1);
+}
+.button._22 .back {
+  right: -50%;
+  top: -50%;
+  background: #8e44ad;
+}
+
+.button:hover .back {
+  width: calc(2 * var(--width));
+  height: calc(2 * var(--height));
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 0.8rem 0;
+  }
+}
+
 @-webkit-keyframes walk {
   from { background-position: 0px; }
   to { background-position: -1944px; }
@@ -608,14 +738,17 @@
       </div>
 
       <div class="flex-direction-column" >
+
+
+        <!-- หน้า2 -->
           <div class="slide two" id="two">
-            <img class="cloud" style="top: 2%;" src="img/cloud.png" />
-            <img class="cloud1" style="top: 6%;" src="img/cloud1.png" />
-            <img class="cloud2" style="top: 8%;" src="img/cloud.png" />
-            <img class="cloud3" style="top: 10%;" src="img/cloud1.png" />
-            <img class="cloud4" style="top: 4%;" src="img/cloud.png" />
-            <a href="#one" style="z-index: 5; position: relative; right: -5%;">
-              <button class="custom-btn btn-5"><span>back</span></button>
+            
+            <a href="#one" style="z-index: 5; position: relative; right: -5%; top: 10px;">
+              <div class="wB">
+                <div class="button _2">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
             </a> 
 
             <p style="left: 45%; position: relative; text-align: left; top: 15%; background-color:rgba(102, 102, 153, 0.5);
@@ -626,13 +759,19 @@
               &nbsp;&nbsp;&nbsp;ตัวเลขนี้ชี้ชัดว่า ทำไมประเทศไทยถึงเป็น 1 ใน 10 ประเทศ <br> &nbsp;&nbsp;&nbsp;ที่มีความหลื่อมล้ำด้านความมั่งคั่งมากที่สุดในโลก</p>
 
           <a href="#three" style="z-index: 11; position: absolute; right: -80%; top: 70%;">
-            <button class="custom-btn btn-5" style="width: 200%; height: 200%; font-size: 30px;"><span>Continue</span></button>
+
+            <div class="wB">
+              <div class="button _2">
+                <span>Continue</span><div class="back"></div>
+              </div>
+            </div>
             </a>
 
             <!-- <button onclick="myFunction()" id="cc" style="position: relative; z-index: 5;">dddddddddd</button>
             <img src="2.1.jpg" id="ice1" style="width: 100%; height: 100%;z-index: 3;">
             <img src="2.2.jpg" style="width: 100%; height: 100%; z-index: 2;"> -->
           </div>
+          <!-- หน้า6คนรวย -->
           <div class="slide six" id="six">
             <img class="cloud" style="top: 106%;" src="img/cloud.png" />
             <img class="cloud1" style="top: 108%;" src="img/cloud2.png" />
@@ -641,7 +780,11 @@
             <img class="cloud4" style="top: 115%;" src="img/cloud.png" />
 
             <a href="#five" style="z-index: 5; position: relative; right: -5%; ">
-              <button class="custom-btn btn-5" id="fivefive"><span>back</span></button>
+              <div class="wB">
+                <div class="button _22">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
             </a>
 
             <p style="left: 40%; position: relative; text-align: left; top: 15%; background-color:rgba(255, 204, 0, 0.5);
@@ -658,8 +801,12 @@
              
           
 
-            <a href="#seven" style="z-index: 16;position: relative; right: -80%; ">
-              <button class="custom-btn btn-5" style="font-size: 30px;"><span>Continue</span></button>
+            <a href="#seven" style="z-index: 16;position: absolute; right: -85%;  top: 175%;">
+              <div class="wB">
+                <div class="button _22">
+                  <span>Continue</span><div class="back"></div>
+                </div>
+              </div>
               </a>
           </div>
       </div>
@@ -668,7 +815,12 @@
        <!-- หน้า3 -->
       <div class="flex-direction-column"> 
           <div class="slide three" id="three">
-
+            
+            <img class="cloud" style="top: 2%;" src="img/cloud.png" />
+            <img class="cloud1" style="top: 6%;" src="img/cloud1.png" />
+            <img class="cloud2" style="top: 8%;" src="img/cloud.png" />
+            <img class="cloud3" style="top: 10%;" src="img/cloud1.png" />
+            <img class="cloud4" style="top: 4%;" src="img/cloud.png" />
             <div class="star" style="width: 350px; height: 200px; float: right;">
               <div class="face" ><img src="2.png" /></div>
               <div class="back" ><img src="1.png" /></div>
@@ -680,12 +832,17 @@
 
 
 
-            <a href="#two" style="z-index: 5;position: relative; right: -5%; ">
-              <button class="custom-btn btn-5"><span>back</span></button>
+            <a href="#two" style="z-index: 5;position: relative; right: -5%; top: 10px;">
+              <div class="wB">
+                <div class="button _2">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
+
               
             </a>
-            <p style="left: 15%; position: relative; text-align: left; top: -5%; background-color:rgba(102, 102, 153, 0.5);
-            border-radius: 30px; width: 50%; height: 45%;
+            <p style="left: 14%; position: relative; text-align: left; top: -5%; background-color:rgba(102, 102, 153, 0.5);
+            border-radius: 30px; width: 53%; height: 45%;
              color: #FFF; z-index: 10;" >
                 &nbsp;&nbsp;&nbsp;ด้านที่อยู่อาศัย<br>
                 &nbsp;&nbsp;&nbsp;อย่างไรก็ตาม ในปัจจุบันความหมายของความยากจน<br>
@@ -695,12 +852,22 @@
                 &nbsp;&nbsp;&nbsp;ขาดโอกาสด้านการศึกษา ไม่มีงานทำ <br>
                 &nbsp;&nbsp;&nbsp;ตลอตจนการตกอยู่ในความเสี่ยงและความหวาดกลัว</p>
         
+<<<<<<< HEAD
             <a href="#four" style="z-index: 11;position: absolute; right: -160%; top: 33%;">
+              <div class="wB">
+                <div class="button _2">
+                  <span>Continue</span><div class="back"></div>
+                </div>
+              </div>
+=======
+            <a href="#four" style="z-index: 11;position: absolute; right: -166%; top: 35%;">
               <button class="custom-btn btn-5"><span>Continue</span></button>
+>>>>>>> 2d59f9b306b504940f2525fb4c0663c34ddf1d92
             </a>
             <div style="transform: scale(0.25);top: 35%; position: absolute"> <div class="sprite right"></div> </div>
           </div>
-               <!-- หน้า7 -->
+          
+               <!-- หน้า7 คนรวย -->
           <div class="slide seven" id="seven">
 
             <div class="star2" style="width: 350px; height: 200px; float: right;">
@@ -711,8 +878,13 @@
             <a href="#three" class="button"   style="z-index: 1;opacity: 0; position: absolute;">
               <button class="custom-btn btn-5" id="Switch2"><span>Read More</span></button> </a>
 
-            <a href="#six" style="z-index: 5;position: relative; right: -5%; ">
-              <button class="custom-btn btn-5"><span>back</span></button>
+            <a href="#six" style="z-index: 5;position: relative; right: -5%; top: 10px;">
+                <div class="wB">
+                <div class="button _22">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
+
             </a>
             <p style="left: 45%; position: relative; text-align: left; top: 15%; background-color:rgba(255, 204, 0, 0.5);
             border-radius: 30px; width: 50%; height: 45%;
@@ -726,7 +898,11 @@
                &nbsp;&nbsp;&nbsp;รวมไปถึงโรงพยาบาลและสวนสาธารณะ ฯลฯ</p>
           
             <a href="#eight" style="z-index: 11;position: absolute; right: -192%; top: 160%;">
-              <button class="custom-btn btn-5"><span>Continue</span></button>
+              <div class="wB">
+                <div class="button _22">
+                  <span>Continue</span><div class="back"></div>
+                </div>
+              </div>
             </a>
 
           </div>
@@ -747,8 +923,12 @@
               <button class="custom-btn btn-5" id="Switch3"><span>Read More</span></button> </a>
 
 
-            <a href="#three" style="z-index: 5; position: relative; right: -5%; ">
-              <button class="custom-btn btn-5"><span>back</span></button>
+            <a href="#three" style="z-index: 5; position: relative; right: -5%;top: 10px; ">
+              <div class="wB">
+                <div class="button _2">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
             </a>
 
             <p style="left: 5%; position: relative; text-align: left; top: -1%; background-color:rgba(102, 102, 153, 0.5);
@@ -763,11 +943,20 @@
                 </p>
 
             
+<<<<<<< HEAD
             <a href="#five" style="z-index: 11;position: absolute; right: -260%; top: 39%;">
+              <div class="wB">
+                <div class="button _2">
+                  <span>Continue</span><div class="back"></div>
+                </div>
+              </div>
+=======
+            <a href="#five" style="z-index: 11;position: absolute; right: -260%; top: 37%;">
               <button class="custom-btn btn-5"><span>Continue</span></button>
+>>>>>>> 2d59f9b306b504940f2525fb4c0663c34ddf1d92
             </a>
           </div>
-             <!-- หน้า8 -->
+             <!-- หน้า8 คนรวย-->
            <div class="slide eight" id="eight">
 
             <div class="star4" style="width: 350px; height: 200px; float: right;">
@@ -780,8 +969,12 @@
               <button class="custom-btn btn-5" id="Switch4"><span>Read More</span></button> </a>
 
 
-        <a href="#seven" style="z-index: 5; position: relative; right: -5%; ">
-          <button class="custom-btn btn-5"><span>back</span></button>
+        <a href="#seven" style="z-index: 5; position: relative; right: -5%; top: 10px;">
+          <div class="wB">
+            <div class="button _22">
+              <span>back</span><div class="back"></div>
+            </div>
+          </div>
         </a>
         <p style="left: 5%; position: relative; text-align: left; top: -1%; background-color:rgba(255, 204, 0, 0.5);
             border-radius: 30px; width: 65%; height: 40%;
@@ -792,13 +985,19 @@
         <br>&nbsp;&nbsp;&nbsp;ไม่ว่าจะเป็นเวลาไหน กี่โมง ก็สามารถขับรถของตนเองเดินทางไปที่ต่างๆได้
         </p>
         <a href="#nine" style="z-index: 11;position: absolute; right: -265%;top: 140%;">
-          <button class="custom-btn btn-5"><span>Continue</span></button>
+          <div class="wB">
+            <div class="button _22">
+              <span>Continue</span><div class="back"></div>
+            </div>
+          </div>
         </a>
       </div>
 
       </div>
 
       <div class="flex-direction-column"> 
+
+
         <!-- หน้า5 -->
         <div class="slide five" id="five">
 
@@ -812,8 +1011,12 @@
             <button class="custom-btn btn-5" id="Switch5"><span>Read More</span></button> </a>
 
 
-          <a href="#four" style="z-index: 5; position: relative; right: -5%; ">
-            <button class="custom-btn btn-5"><span>back</span></button>
+          <a href="#four" style="z-index: 5; position: relative; right: -5%; top: 10px; ">
+             <div class="wB">
+                <div class="button _2">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
           </a>
           <p style="left: 5%; position: relative; text-align: left; top: -1%; background-color:rgba(102, 102, 153, 0.5);
             border-radius: 30px; width: 65%; height: 35%;
@@ -825,10 +1028,14 @@
               ทำให้บุคลากรไม่สามารถดูแลคุณภาพบริการได้เท่าที่ควร</p>
         
           <a href="#six" style="z-index: 5; position: absolute; right: -367%; top: 32%; z-index: 11;">
-            <button class="custom-btn btn-5"><span>Continue</span></button>
+            <div class="wB">
+              <div class="button _2">
+                <span>Continue</span><div class="back"></div>
+              </div>
+            </div>
             </a>
         </div>
-        <!-- หน้า 9 -->
+        <!-- หน้า 9 คนรวย-->
         <div class="slide nine" id="nine">
 
 
@@ -846,7 +1053,11 @@
             <br>&nbsp;&nbsp;&nbsp;มีสัดส่วนของการใช้บริการในภาคเอกชนต่ำกว่าประชากรกลุ่มรายได้สูง
             <br>&nbsp;&nbsp;&nbsp;อย่างชัดเจน 
             <a href="#eight" style="z-index: 5; position: relative; right: -49%; ">
-          <button class="custom-btn btn-5"><span>back</span></button>
+              <div class="wB">
+                <div class="button _22">
+                  <span>back</span><div class="back"></div>
+                </div>
+              </div>
         </a>
 </p>
 
