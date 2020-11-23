@@ -1087,7 +1087,7 @@ $('#coin').on('click', function(){
       document.getElementById("ice1").style.opacity = 0;
     }
 (function() {
-
+  var AtSprite = 3;
   var sprite = document.querySelector('.sprite'),
     key = {left: false, right: false},
     trans = 0,
@@ -1134,6 +1134,15 @@ $('#coin').on('click', function(){
       sprite.classList.add('left');
       sprite.classList.add('walk-left');
     }
+    if (keyCode=== 39 || keyCode=== 37 ) {
+      if (isCollide(document.getElementsByClassName("slide three")[0],document.getElementsByClassName("sprite")[0])) 
+        {if (AtSprite != 3) { AtSprite =3;document.getElementsByClassName("custom-btn btn-5")[12].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate();}
+      if (isCollide(document.getElementsByClassName("slide four")[0],document.getElementsByClassName("sprite")[0])) 
+        {if (AtSprite != 4) { AtSprite =4;document.getElementsByClassName("custom-btn btn-5")[7].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
+      if (isCollide(document.getElementsByClassName("slide five")[0],document.getElementsByClassName("sprite")[0])) 
+        {if (AtSprite != 5) { AtSprite =5;document.getElementsByClassName("custom-btn btn-5")[13].click(); if (key.right === true) {trans += 150;} else {trans -= 150;}} ;translate(); }
+
+    }
   }
 
   function stop(e) {
@@ -1154,6 +1163,17 @@ $('#coin').on('click', function(){
   document.addEventListener('keyup', stop, false);
 
 })();
+function isCollide(a, b) {
+    var aRect = a.getBoundingClientRect();
+    var bRect = b.getBoundingClientRect();
+
+    return !(
+        ((aRect.top + aRect.height) < (bRect.top)) ||
+        (aRect.top > (bRect.top + bRect.height)) ||
+        ((aRect.left + aRect.width) < bRect.left) ||
+        (aRect.left > (bRect.left + bRect.width))
+    );
+}
   </script>
 </body>
 
