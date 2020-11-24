@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             document.querySelector("h2").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
             setTimeout(function () {
                 typeWriter(text, i + 1, fnCallback)
-            }, 100);
+            }, 80);
         }
         else if (typeof fnCallback == 'function') {
             setTimeout(fnCallback, 700);
