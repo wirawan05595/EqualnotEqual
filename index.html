@@ -638,8 +638,13 @@
 
 
 
-
-
+.page
+    {
+     -webkit-transform: rotate(-90deg); 
+     -moz-transform:rotate(-90deg);
+     filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    }
+    
 .button._22 {
   background: #FF9933;
 }
@@ -1424,13 +1429,13 @@ $('#coin').on('click', function(){
       key.left = true;
     }
     if (key.right === true) {
-      trans += 10;
+      trans += 25;
       translate();
       sprite.classList.remove('left');
       sprite.classList.add('right');
       sprite.classList.add('walk-right');
     } else if (key.left === true) {
-      trans -= 10;
+      trans -= 25;
       translate();
       sprite.classList.remove('right');
       sprite.classList.add('left');
@@ -1455,13 +1460,13 @@ $('#coin').on('click', function(){
       keyr.left = true;
     }
     if (keyr.right === true) {
-      transr += 10;
+      transr += 35;
       translater();
       spr.classList.remove('leftr');
       spr.classList.add('rightr');
       spr.classList.add('walk-rightr');
     } else if (keyr.left === true) {
-      transr -= 10;
+      transr -= 35;
       translater();
       spr.classList.remove('rightr');
       spr.classList.add('leftr');
