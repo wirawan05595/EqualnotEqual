@@ -44,7 +44,7 @@
     }
 
     .one {
-      max-width: 100%;
+      width: 100%;
     height: auto!important;
 
       background-image: url("Background.png");
@@ -52,17 +52,16 @@
     }
 
     .two {
-      max-width: 100%;
+      width: 100%;
     height: 100vh;
       background-image: url("img/W1.jpg");
-      max-width: 100%;
-      height: 100vh;
+
 
     }
 
     .three {
       background-image: url("img/W2.jpg");
-      max-width: 100%;
+      width: 100%;
       height: 100vh;
     }
 
@@ -111,6 +110,7 @@
       animation: coincoin 51s ease-in-out;
 
     }
+    
 
     .custom-btn {
   width: 130px;
@@ -663,6 +663,22 @@
   width: calc(2 * var(--width));
   height: calc(2 * var(--height));
 }
+img{
+  -webkit-animation: imgg 2s ease-in-out;
+      -moz-animation: imgg 2s ease-in-out;
+      animation: imgg 2s ;
+}
+
+
+@keyframes imgg {
+ from{
+   opacity: 0;
+
+ }
+ to{
+  opacity: 1;
+ }
+}
 
 @media only screen and (max-width: 750px) {
   .wrapper {
@@ -740,7 +756,7 @@
 <body>
   
   
-
+   <div class="site-wrapper">
   <div class="outer-wrapper">
     <div class="wrapper">
       <div class="slide one" id="one">
@@ -761,12 +777,12 @@
         </div>
 
 
-        <h1 style="position: relative; top: 80%; 
+        <h1 style="position: relative; top: 25%; 
           text-align: center;
       color: antiquewhite;
       margin: auto auto;
       display: block;
-      font-size: 60px;" class="text2">ลองกดที่เหรียญดูสิ</h1>
+      font-size: 60px; z-index: 20;" class="text2" >ลองกดที่เหรียญดูสิ</h1>
         <a href="#two" class="button" style="z-index: 5;opacity: 0; position: absolute;left:47%; visibility: hidden; top: 80%;display: none;">
           <button class="custom-btn btn-5" id="abs" ><span>Read More</span></button> </a>
         <h2 class="text"></h2>
@@ -787,18 +803,22 @@
                 </div>
               </div>
             </a> 
-
-            <p style="left: 45%; position: relative; text-align: left; top: 25%; background-color:#a484ca;
-            border-radius: 30px; width: 90vh; 
+          <div style="left: 45%; position: relative;  top: 25%; background-color:#a484ca;
+          border-radius: 30px; width: 50vw; 
+           color: #FFF; z-index: 10; font-size: 2vh;">
+            <p style="left: 2%; position: relative; text-align: left; top: 25%; background:none;
+            width: 45vw; 
              color: #FFF; z-index: 10; font-size: 2vh;">
-             <br>&nbsp;&nbsp;&nbsp;<t style="font-size: 5vh ;">ยินดีด้วยคุณได้คนจนแต่ไม่เป็นอะไร 
-             <br>&nbsp;&nbsp;หรอกนะ&nbsp;&nbsp;เพราะคนไทยส่วนใหญ่กว่า 
-             <br>&nbsp;&nbsp;90% ก็เป็นคนจนกันทั้งนั้นแหละ </t>
-             <br>&nbsp;&nbsp; ประเทศไทยมีคนรวยเพียง 1%ครองความมั่งคั่ง ในประเทศสูงถึง 58.0% ตัวเลขนี้ชี้ชัดว่าทำไม 
-             <br>&nbsp;&nbsp; ประเทศไทยถึงเป็น 1 ใน 10 ประเทศ ที่มีความเหลื่อมล้ำด้านความมั่งคั่งมากที่สุดในโลก 
+             <br>
+             <t style="font-size: 5vh ;">เสียใจด้วยคุณได้คนจนแต่ไม่เป็นอะไร 
+             หรอกนะ เพราะคนไทยส่วนใหญ่กว่า 
+             90% ก็เป็นคนจนกันทั้งนั้นแหละ </t> <br>
+             ประเทศไทยมีคนรวยเพียง 1%ครองความมั่งคั่ง ในประเทศสูงถึง 58.0% ตัวเลขนี้ชี้ชัดว่าทำไม 
+             ประเทศไทยถึงเป็น 1 ใน 10 ประเทศ ที่มีความเหลื่อมล้ำด้านความมั่งคั่งมากที่สุดในโลก 
              <br>
              <br>
             </p>
+          </div>
 
           <a href="#three" style="z-index: 11; position: absolute; right: -95%; top: 10px;">
 
@@ -830,7 +850,7 @@
             </a>
 
             <p class="lead"  style="left: 40%; position: relative; text-align: left; top: 25%; background-color:rgba(255, 204, 0, 0.5);
-            border-radius: 30px; width: 90vh;
+            border-radius: 30px; width: 60vw;
              color: #FFF; z-index: 10; font-size: 2vh;" >
             <br>&nbsp;&nbsp;&nbsp;<t style="font-size: 5vh;">ยินดีด้วยคุณได้คนรวย 
             <br>&nbsp;แต่คุณคงกดสลับมาสินะ... แต่ไม่เป็นไร</t>
@@ -887,23 +907,35 @@
                 </div>
               </div>
 
+
               
             </a>
-            <p class="lead"  style="left: 20%; position: relative; text-align: left; top: 5%; background-color:rgba(102, 102, 153, 0.5);
-            border-radius: 30px; width: 95vh; height: 35%; display: block;
-             color: #FFF; z-index: 10;font-size: 2.5vh;" >
-                <br>&nbsp;&nbsp;&nbsp;<t style="font-size: 5vh;">ด้านที่อยู่อาศัย</t><br>
-                &nbsp;&nbsp;&nbsp;อย่างไรก็ตาม ในปัจจุบันความหมายของความยากจนยังได้รับการพิจารณา<br>
-                &nbsp;&nbsp;&nbsp;ครอบคลุมไปถึงมิติอื่นที่มิใช่ตัวเงินอีกด้วย กล่าวคือ การขาดแคลนที่อยู่อาศัย<br>
-                &nbsp;&nbsp;&nbsp;ขาดโอกาสในการเข้าถึงบริการสาธารณสุขขาดโอกาสด้านการศึกษา ไม่มีงานทำ<br> 
-                &nbsp;&nbsp;&nbsp;ตลอดจนการตกอยู่ในความเสี่ยงและความหวาดกลัว</p>
-        
-            <a href="#four" style="z-index: 11;position: absolute; right: -165%; top: 37%;">
-              <div class="wB">
-                <div class="button _2">
-                  <span>Continue</span><div class="back"></div>
+          <div style="left: 14%; position: relative; text-align: left; top: 5%; background-color:rgba(102, 102, 153, 0.5);
+          border-radius: 30px; width: 50vw; word-wrap: break-word; 
+           color: #FFF; z-index: 10;">
+            <p class="lead" style="left: 2%; position: relative; text-align: left; top: -5%; background:none;
+            border-radius: 30px; width: 48vw; word-wrap: break-word;
+             color: #FFF; z-index: 10; font-size: 1.5vw;" >
+                <br><t style="font-size: 2vw;">ด้านที่อยู่อาศัย</t><br>
+                อย่างไรก็ตาม ในปัจจุบันความหมายของความยากจนยังได้รับการพิจารณา
+                ครอบคลุมไปถึงมิติอื่นที่มิใช่ตัวเงินอีกด้วย กล่าวคือ การขาดแคลนที่อยู่อาศัย
+                ขาดโอกาสในการเข้าถึงบริการสาธารณสุขขาดโอกาสด้านการศึกษา ไม่มีงานทำ 
+                ตลอดจนการตกอยู่ในความเสี่ยงและความหวาดกลัว<br>
+                      
+                
+              </p>
+              <br>
+              <a href="#four" style="position: relative; float: right;">
+                <div class="wB">
+                  <div class="button _2">
+                    <span>Continue</span><div class="back"></div>
+                  </div>
                 </div>
-              </div>
+
+
+          </div>
+        
+            
 
 
             </a>
@@ -976,7 +1008,7 @@
                 </div>
               </div>
             </a>
-
+            
             <p class="lead"  style="left: 20%; position: relative; text-align: left; top: 5%; background-color:rgba(102, 102, 153, 0.5);
             border-radius: 30px; width: 90vh; height: 33%;
              color: #FFF; z-index: 10; font-size: 2.5vh;"  >
@@ -1118,6 +1150,7 @@
       </div>
       
     </div><!-- wrapper -->
+  </div>
       
 
        
