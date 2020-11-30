@@ -385,6 +385,8 @@
 
 
 .star6{
+  position: relative;
+    z-index: 10;
     margin: 0 0 12px;
     transition: all 0.7s ease-in-out;
     transform-style: preserve-3d;
@@ -575,6 +577,8 @@
 }
 
 .wB {
+  position: relative;
+    z-index: 10;
   width: 150px;
   height: 5vh;
   display: flex;
@@ -636,12 +640,6 @@
   width: calc(2 * var(--width));
   height: calc(2 * var(--height));
 }
-
-
-
-
-
-
 .button._22 {
   background: #FF9933;
 }
@@ -750,7 +748,17 @@ img{
   -o-animation: walk .9s steps(4) infinite;
   animation: walk .9s steps(4) infinite;
 }
-
+.lr{
+width: 100%;
+text-align: center;
+bottom: 1vh;
+position: absolute;
+color: rgb(255, 255, 255);
+}
+.LR{
+  margin: 0.5%;
+  width: 10%;
+}
 
   </style>
 </head>
@@ -892,7 +900,10 @@ img{
       <div class="flex-direction-column"> 
 
           <div class="slide three" id="three">
-            
+            <div class="lr">
+            <img class="LR" src="img/LR.gif" /><br>
+            ลองกดปุ่มนี้ที่คีย์บอร์ดดูสิ
+          </div>
             <img class="cloud" style="top: 2%;" src="img/cloud1.png" />
             <img class="cloud1" style="top: 6%;" src="img/cloud1.png" />
             <img class="cloud2" style="top: 8%;" src="img/cloud1.png" />
